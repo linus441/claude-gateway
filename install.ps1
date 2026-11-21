@@ -103,18 +103,29 @@ function New-MagpieShortcut($exe, $workdir) {
 function Ensure-NodeExe {
     $nodeExe = Join-Path $Payload 'gateway\node.exe'
     if ((Test-Path $nodeExe -PathType Leaf) -and ((Get-Item $nodeExe).Length -gt 30MB)) { return $true }
+    # 允许直接指定本地 node.exe，完全不联网
+    if ($env:CLAUDE_NODE_EXE -and (Test-Path $env:CLAUDE_NODE_EXE -PathType Leaf)) {
+        Copy-Item $env:CLAUDE_NODE_EXE $nodeExe -Force
+        if ((Get-Item $nodeExe).Length -gt 30MB) { return $true }
+    }
     $ver = 'v22.22.2'
     $urls = @(
-        ('https://nodejs.org/dist/' + $ver + '/node-' + $ver + '-win-x64.zip'),
-        ('https://npmmirror.com/mirrors/node/' + $ver + '/node-' + $ver + '-win-x64.zip')
+        ('https://npmmirror.com/mirrors/node/' + $ver + '/node-' + $ver + '-win-x64.zip'),
+        ('https://nodejs.org/dist/' + $ver + '/node-' + $ver + '-win-x64.zip')
     )
     $zip = Join-Path $env:TEMP ('node-' + [guid]::NewGuid().ToString('N') + '.zip')
     [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
     Add-Type -AssemblyName System.IO.Compression.FileSystem -ErrorAction SilentlyContinue
+    $curl = Join-Path $env:SystemRoot 'System32\curl.exe'
     foreach ($u in $urls) {
         try {
-            Write-Host ('     正在下载 Node 运行时：' + $u) -ForegroundColor DarkGray
-            Invoke-WebRequest -Uri $u -OutFile $zip -UseBasicParsing -TimeoutSec 300 -ErrorAction Stop
+            Write-Host ('     正在下载 Node 运行时（34 MB，支持断点续传）：' + $u) -ForegroundColor DarkGray
+            if (Test-Path $curl) {
+                & $curl -L --fail --retry 3 --retry-delay 2 -C - -o $zip $u
+                if ($LASTEXITCODE -ne 0) { throw ('curl 退出码 ' + $LASTEXITCODE) }
+            } else {
+                Invoke-WebRequest -Uri $u -OutFile $zip -UseBasicParsing -TimeoutSec 300 -ErrorAction Stop
+            }
             $z = [IO.Compression.ZipFile]::OpenRead($zip)
             $entry = $z.Entries | Where-Object { $_.FullName -like '*/node.exe' } | Select-Object -First 1
             if ($entry) {

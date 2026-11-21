@@ -61,18 +61,51 @@ claude-gateway/
 
 ## 快速开始
 
-### 依赖是自动下载的
+### 三种使用方式，先选对
 
-本仓库**不提交任何第三方二进制**，安装时按需下载：
-
-| 依赖 | 什么时候要 | 从哪来 |
+| 场景 | 用什么 | 桌面上会出现 |
 |---|---|---|
-| `node.exe` | 装网关时 | 安装脚本自动从 nodejs.org 下载 v22.22.2（失败会回退到 npmmirror） |
-| `Claude-win-x64.msix` | 装 Claude 时 | 安装脚本自动从本项目 Release 下载，并校验 SHA256 |
-| `magpie.exe`（可选） | 想用 Magpie 时 | 自行放进 `payload/magpie/`，没有也能装，只是少一个上游 |
+| 只想用网关卡（自己接上游） | 源码仓库 + `install.ps1` | `Claude 网关` |
+| 要 Magpie 的 WorkBuddy 额度 | **完整部署包**（Release 里的 ZIP） | `Claude 网关` + `Magpie` |
+| 还要装 Claude Desktop | 再加 `install-claude.ps1` | 再加 `Claude` |
 
-如果目标机器完全离线，可以先用一台有网的机器跑一次安装（依赖会缓存到 `payload` 下），
-再把整个目录拷过去。
+**桌面图标一共三个：**
+
+| 图标 | 谁创建 | 指向 |
+|---|---|---|
+| `Claude 网关.url` | `install.ps1` | 控制面板 `http://127.0.0.1:15722/admin` |
+| `Magpie.lnk` | `install.ps1`（需要 `magpie.exe`） | `%LOCALAPPDATA%\ClaudeGateway\magpie\magpie.exe` |
+| `Claude.lnk` | `install-claude.ps1` | 商店版 Claude Desktop |
+
+`install.ps1` 装完会自检，最后一行会打印：
+
+```text
+桌面图标检查：网关 + Magpie 都在
+```
+
+只显示「只有网关，Magpie 缺失」，说明你用的是源码仓库——它没有 `magpie.exe`，换完整部署包即可。
+
+### 依赖与下载
+
+本仓库**不提交任何第三方二进制**。安装顺序是「本地优先，网络兜底」：
+
+| 依赖 | 大小 | 从哪来 |
+|---|---|---|
+| `node.exe` | 83 MB | 先找 `payload/gateway/node.exe`；没有则从 npmmirror / nodejs.org 下载，**支持断点续传** |
+| `Claude-win-x64.msix` | 285 MB | 先找同目录/相邻的 `Claude网关部署包`；没有才从本项目 Release 下载，`curl` 断点续传 + SHA256 校验 |
+| `magpie.exe` | 98 MB | 只在完整部署包里有，源码仓库没有 |
+
+也可以手动指定本地文件，完全不走网络：
+
+```powershell
+$env:CLAUDE_NODE_EXE = 'D:\somewhere\node.exe'
+$env:CLAUDE_MSIX_PATH = 'D:\somewhere\Claude-win-x64.msix'
+.\install.ps1
+.\install-claude.ps1
+```
+
+**下载慢怎么办**：GitHub Release 在国内可能很慢。直接用 Release 里的**完整部署包 ZIP**（359 MB，含全部二进制），
+解压后本地安装，全程零下载。
 
 ### 安装
 

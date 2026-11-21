@@ -2,6 +2,13 @@
 
 版本号的唯一来源是 `payload/gateway/version.json`，安装脚本、控制面板和 `/health` 都读它。
 
+## 0.3.5 — 2026-11-21
+
+- 下载改用 `curl`：支持断点续传、失败重试，替代无进度提示的 `Invoke-WebRequest`
+- Node 下载源优先 npmmirror（国内更快），nodejs.org 作为兜底
+- 支持 `CLAUDE_NODE_EXE` / `CLAUDE_MSIX_PATH` 环境变量指定本地文件，完全离线安装
+- README 补充：三种使用方式、桌面图标清单、下载慢的解决办法
+
 ## 0.3.4 — 2026-11-21
 
 - `install-claude.ps1` 优先使用本地/共享目录里的 MSIX，避免从 GitHub 下载 285 MB

@@ -1,9 +1,14 @@
 Claude 网关部署包
-版本：0.3.4
+版本：0.3.5
 日期：2026-11-21
 
 版本号的唯一来源是 payload\gateway\version.json。
 改版本时只改那一个文件，安装脚本、控制面板、/health 都会跟着变。
+
+0.3.5
+  · 下载改用 curl，支持断点续传和失败重试
+  · Node 下载源优先 npmmirror
+  · 支持 CLAUDE_NODE_EXE / CLAUDE_MSIX_PATH 指定本地文件
 
 0.3.4
   · install-claude.ps1 优先使用本地/共享目录里的 MSIX，避免从 GitHub 下载

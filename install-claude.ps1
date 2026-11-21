@@ -29,10 +29,11 @@ $MsixDownloadUrls = @(
 $MsixSha256 = '4625EAA902E05C81D35D247423AE24A2A1C30E60CAE9B355C07264998A89E453'
 # 本机/共享目录里已经有完整包时直接拿来用，不走网络
 $MsixLocalSources = @(
+    $env:CLAUDE_MSIX_PATH,
     (Join-Path $Root 'Claude网关部署包\payload\claude\Claude-win-x64.msix'),
     (Join-Path (Split-Path $Root -Parent) 'Claude网关部署包\payload\claude\Claude-win-x64.msix'),
     'Z:\Claude网关部署包\payload\claude\Claude-win-x64.msix'
-)
+) | Where-Object { $_ }
 
 function Ensure-ClaudeMsix {
     if (Test-Path -LiteralPath $Msix -PathType Leaf) { return $true }
@@ -52,8 +53,14 @@ function Ensure-ClaudeMsix {
         [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
         foreach ($url in $MsixDownloadUrls) {
             try {
-                Write-Host ('     正在下载 Claude MSIX：' + $url) -ForegroundColor DarkGray
-                Invoke-WebRequest -Uri $url -OutFile $Msix -UseBasicParsing -ErrorAction Stop
+                Write-Host ('     正在下载 Claude MSIX（285 MB，支持断点续传）：' + $url) -ForegroundColor DarkGray
+                $curl = Join-Path $env:SystemRoot 'System32\curl.exe'
+                if (Test-Path $curl) {
+                    & $curl -L --fail --retry 3 --retry-delay 2 -C - -o $Msix $url
+                    if ($LASTEXITCODE -ne 0) { throw ('curl 退出码 ' + $LASTEXITCODE) }
+                } else {
+                    Invoke-WebRequest -Uri $url -OutFile $Msix -UseBasicParsing -ErrorAction Stop
+                }
                 if ((Test-Path -LiteralPath $Msix -PathType Leaf) -and (Get-Item -LiteralPath $Msix).Length -ge 1MB) {
                     $hash = (Get-FileHash -LiteralPath $Msix -Algorithm SHA256).Hash
                     if ($hash -eq $MsixSha256) { return $true }
