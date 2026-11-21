@@ -1,0 +1,46 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: JavaScript 语法检查
+        shell: pwsh
+        run: |
+          $files = Get-ChildItem payload/gateway -Filter *.js
+          foreach ($f in $files) {
+            node --check $f.FullName
+            if ($LASTEXITCODE -ne 0) { throw "语法错误: $($f.Name)" }
+            Write-Host "OK  $($f.Name)"
+          }
+
+      - name: JSON 校验
+        shell: pwsh
+        run: |
+          $files = Get-ChildItem payload/gateway -Filter *.json
+          foreach ($f in $files) {
+            $null = Get-Content $f.FullName -Raw -Encoding UTF8 | ConvertFrom-Json
+            Write-Host "OK  $($f.Name)"
+          }
+
+      - name: PowerShell 语法检查
+        shell: pwsh
+        run: |
+          $files = Get-ChildItem . -Filter *.ps1
+          foreach ($f in $files) {
+            $errs = $null
+            [void][System.Management.Automation.Language.Parser]::ParseFile($f.FullName, [ref]$null, [ref]$errs)
+            if ($errs) { throw "语法错误: $($f.Name) - $($errs[0].Message)" }
+            Write-Host "OK  $($f.Name)"
+          }
