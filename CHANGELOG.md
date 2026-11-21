@@ -2,6 +2,12 @@
 
 版本号的唯一来源是 `payload/gateway/version.json`，安装脚本、控制面板和 `/health` 都读它。
 
+## 0.3.3 — 2026-11-21
+
+- 安装脚本支持把 `magpie.exe` 直接放在 `install.ps1` 同目录
+- 安装结束自检：桌面网关图标和 Magpie 图标是否都创建成功
+- 缺少 `magpie.exe` 时提示改用完整部署包，不再静默跳过
+
 ## 0.3.2 — 2026-11-21
 
 - 安装脚本自动下载 Node 运行时（nodejs.org，失败回退 npmmirror）

@@ -1,9 +1,14 @@
 Claude 网关部署包
-版本：0.3.2
+版本：0.3.3
 日期：2026-11-21
 
 版本号的唯一来源是 payload\gateway\version.json。
 改版本时只改那一个文件，安装脚本、控制面板、/health 都会跟着变。
+
+0.3.3
+  · 安装脚本支持把 magpie.exe 直接放在 install.ps1 同目录
+  · 安装结束自检桌面网关图标和 Magpie 图标
+  · 缺少 magpie.exe 时提示改用完整部署包，不再静默跳过
 
 0.3.2
   · 安装脚本自动下载 Node 运行时（nodejs.org，回退 npmmirror）

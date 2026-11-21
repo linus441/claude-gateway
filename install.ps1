@@ -191,6 +191,15 @@ foreach ($f in Get-ChildItem (Join-Path $Payload 'gateway') -File) {
     Copy-Item $f.FullName $t -Force
     $copied++
 }
+# 也接受放在安装脚本旁边的 magpie.exe（有些人不解压 payload 子目录）
+$mpSrcDir = Join-Path $Payload 'magpie'
+if (-not (Test-Path (Join-Path $mpSrcDir 'magpie.exe'))) {
+    $altExe = Join-Path $Root 'magpie.exe'
+    if (Test-Path $altExe) {
+        New-Item -ItemType Directory -Force -Path $mpSrcDir | Out-Null
+        Copy-Item $altExe (Join-Path $mpSrcDir 'magpie.exe') -Force
+    }
+}
 $mpFiles = @(Get-ChildItem (Join-Path $Payload 'magpie') -File -ErrorAction SilentlyContinue | Where-Object { $_.Name -ne '.gitkeep' })
 if ($mpFiles.Count -gt 0) {
     foreach ($f in $mpFiles) {
@@ -266,12 +275,26 @@ Ok ('已创建 ' + $urlPath)
 
 # Magpie 桌面图标
 $mpExe = Join-Path $MpDir 'magpie.exe'
+$mpLnk = Join-Path $desk 'Magpie.lnk'
 if (Test-Path $mpExe) {
     if (New-MagpieShortcut $mpExe $MpDir) {
-        Ok '已创建 Magpie 桌面图标'
+        Ok ('已创建 Magpie 桌面图标：' + $mpLnk)
+    } else {
+        Warn 'Magpie 图标创建失败（文件在，但快捷方式没建成）'
     }
 } else {
-    Warn '找不到 magpie.exe，跳过 Magpie 图标'
+    Warn '没有 magpie.exe，跳过 Magpie 图标。要 Magpie 就用完整部署包，或把 magpie.exe 放到 payload\magpie\'
+}
+
+# 装完自检：两个图标是否真的在桌面上
+$gwIconOk = Test-Path (Join-Path $desk 'Claude 网关.url')
+$mpIconOk = Test-Path $mpLnk
+if ($gwIconOk -and $mpIconOk) {
+    Ok '桌面图标检查：网关 + Magpie 都在'
+} elseif ($gwIconOk) {
+    Warn '桌面图标检查：只有网关，Magpie 缺失'
+} else {
+    Warn '桌面图标检查：网关图标也缺失'
 }
 
 # Claude 桌面图标（如果已经安装）
