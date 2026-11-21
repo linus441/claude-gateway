@@ -121,7 +121,7 @@ function Ensure-NodeExe {
         try {
             Write-Host ('     正在下载 Node 运行时（34 MB，支持断点续传）：' + $u) -ForegroundColor DarkGray
             if (Test-Path $curl) {
-                & $curl -L --fail --retry 3 --retry-delay 2 -C - -o $zip $u
+                & $curl -L --fail --ssl-no-revoke --retry 3 --retry-delay 2 -C - -o $zip $u
                 if ($LASTEXITCODE -ne 0) { throw ('curl 退出码 ' + $LASTEXITCODE) }
             } else {
                 Invoke-WebRequest -Uri $u -OutFile $zip -UseBasicParsing -TimeoutSec 300 -ErrorAction Stop

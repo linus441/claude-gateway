@@ -32,7 +32,10 @@ $MsixLocalSources = @(
     $env:CLAUDE_MSIX_PATH,
     (Join-Path $Root 'Claude网关部署包\payload\claude\Claude-win-x64.msix'),
     (Join-Path (Split-Path $Root -Parent) 'Claude网关部署包\payload\claude\Claude-win-x64.msix'),
-    'Z:\Claude网关部署包\payload\claude\Claude-win-x64.msix'
+    'Z:\Claude网关部署包\payload\claude\Claude-win-x64.msix',
+    'C:\Claude网关部署包\payload\claude\Claude-win-x64.msix',
+    'D:\Claude网关部署包\payload\claude\Claude-win-x64.msix',
+    '\\192.168.77.1\windowstest-hv2\Claude网关部署包\payload\claude\Claude-win-x64.msix'
 ) | Where-Object { $_ }
 
 function Ensure-ClaudeMsix {
@@ -56,7 +59,7 @@ function Ensure-ClaudeMsix {
                 Write-Host ('     正在下载 Claude MSIX（285 MB，支持断点续传）：' + $url) -ForegroundColor DarkGray
                 $curl = Join-Path $env:SystemRoot 'System32\curl.exe'
                 if (Test-Path $curl) {
-                    & $curl -L --fail --retry 3 --retry-delay 2 -C - -o $Msix $url
+                    & $curl -L --fail --ssl-no-revoke --retry 3 --retry-delay 2 -C - -o $Msix $url
                     if ($LASTEXITCODE -ne 0) { throw ('curl 退出码 ' + $LASTEXITCODE) }
                 } else {
                     Invoke-WebRequest -Uri $url -OutFile $Msix -UseBasicParsing -ErrorAction Stop

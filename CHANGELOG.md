@@ -2,6 +2,11 @@
 
 版本号的唯一来源是 `payload/gateway/version.json`，安装脚本、控制面板和 `/health` 都读它。
 
+## 0.3.6 — 2026-11-21
+
+- MSIX 本地搜索范围扩大：Z:、C:、D:、UNC 共享路径
+- curl 增加 `--ssl-no-revoke`，规避 Windows 证书吊销检查导致的下载失败
+
 ## 0.3.5 — 2026-11-21
 
 - 下载改用 `curl`：支持断点续传、失败重试，替代无进度提示的 `Invoke-WebRequest`
