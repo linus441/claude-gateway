@@ -1,0 +1,31 @@
+Claude 网关部署包
+版本：0.3.2
+日期：2026-11-21
+
+版本号的唯一来源是 payload\gateway\version.json。
+改版本时只改那一个文件，安装脚本、控制面板、/health 都会跟着变。
+
+0.3.2
+  · 安装脚本自动下载 Node 运行时（nodejs.org，回退 npmmirror）
+  · magpie.exe 改为可选：没有就跳过，不再因缺文件中止安装
+  · 补齐 VERSION.txt、省空间说明.txt
+
+0.3.1
+  · install-claude.ps1 自动下载 Claude MSIX 并校验 SHA256
+
+0.3.0
+  · 上游协议改为自动识别：保存时探一次 /v1/messages，
+    403（分组未开通）和 404（端点不存在）都判定为 OpenAI 兼容，
+    400 但提示模型名不对则判定为 Anthropic 兼容
+  · 移除「上游协议」下拉，避免选错导致
+    403 This group does not allow /v1/messages dispatch
+  · 识别结果存进 upstreams.json，改显示名不会重新探测
+  · 推理模型判断从 gpt-5 扩展到 gpt-5 ~ gpt-9
+
+0.2.0
+  · 新增 openai-bridge.js：Anthropic 与 OpenAI Chat Completions 双向转换
+  · Claude Desktop 安装从一键部署中拆出，改为独立安装器
+  · 桌面上分别创建 Magpie 和 Claude 图标
+
+0.1.0
+  · 首个可用版本：网关、托盘、控制面板、3p 配置生成

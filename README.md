@@ -61,17 +61,18 @@ claude-gateway/
 
 ## 快速开始
 
-### 需要自备的东西
+### 依赖是自动下载的
 
-本仓库**不包含任何第三方二进制**，需要自己准备并放进对应目录：
+本仓库**不提交任何第三方二进制**，安装时按需下载：
 
-| 文件 | 放到 | 从哪来 |
+| 依赖 | 什么时候要 | 从哪来 |
 |---|---|---|
-| `node.exe` | `payload/gateway/` | [Node.js](https://nodejs.org/) 官方 Windows 版（v22 可用） |
-| `magpie.exe`（可选） | `payload/magpie/` | 你使用的本地代理工具 |
-| `Claude-win-x64.msix`（可选） | `payload/claude/` | 微软商店版 Claude Desktop 的安装包 |
+| `node.exe` | 装网关时 | 安装脚本自动从 nodejs.org 下载 v22.22.2（失败会回退到 npmmirror） |
+| `Claude-win-x64.msix` | 装 Claude 时 | 安装脚本自动从本项目 Release 下载，并校验 SHA256 |
+| `magpie.exe`（可选） | 想用 Magpie 时 | 自行放进 `payload/magpie/`，没有也能装，只是少一个上游 |
 
-不放 Magpie 也能用——只要你在面板里接一个别的上游。
+如果目标机器完全离线，可以先用一台有网的机器跑一次安装（依赖会缓存到 `payload` 下），
+再把整个目录拷过去。
 
 ### 安装
 

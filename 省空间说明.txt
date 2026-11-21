@@ -1,0 +1,15 @@
+省空间：装完之后哪些能删
+================================
+
+这个包 470 MB，其中 285 MB 是 Claude 的安装包。装完之后下面这些都可以删，
+不影响已经装好的东西：
+
+  payload\claude\Claude-win-x64.msix     285 MB   已经装进系统了，不用留
+  payload\magpie\magpie.exe               99 MB   已经复制到 %LOCALAPPDATA%\ClaudeGateway\magpie\
+  payload\gateway\node.exe                84 MB   已经复制到 %LOCALAPPDATA%\ClaudeGateway\gateway\
+
+也就是说，装完可以把整个 payload 目录删掉，只留着
+"一键安装.cmd / install.ps1 / 安装说明.md" 做记录。
+
+反过来，如果你想把这份包再给别的机器用，那就别删——它本身是自包含的，
+拿到任何一台 Windows 10/11 上都能直接跑。

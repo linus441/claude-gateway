@@ -99,6 +99,38 @@ function New-MagpieShortcut($exe, $workdir) {
     }
 }
 
+# 仓库里不带 node.exe（83 MB），首次安装时从官方源取一份
+function Ensure-NodeExe {
+    $nodeExe = Join-Path $Payload 'gateway\node.exe'
+    if ((Test-Path $nodeExe -PathType Leaf) -and ((Get-Item $nodeExe).Length -gt 30MB)) { return $true }
+    $ver = 'v22.22.2'
+    $urls = @(
+        ('https://nodejs.org/dist/' + $ver + '/node-' + $ver + '-win-x64.zip'),
+        ('https://npmmirror.com/mirrors/node/' + $ver + '/node-' + $ver + '-win-x64.zip')
+    )
+    $zip = Join-Path $env:TEMP ('node-' + [guid]::NewGuid().ToString('N') + '.zip')
+    [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+    Add-Type -AssemblyName System.IO.Compression.FileSystem -ErrorAction SilentlyContinue
+    foreach ($u in $urls) {
+        try {
+            Write-Host ('     正在下载 Node 运行时：' + $u) -ForegroundColor DarkGray
+            Invoke-WebRequest -Uri $u -OutFile $zip -UseBasicParsing -TimeoutSec 300 -ErrorAction Stop
+            $z = [IO.Compression.ZipFile]::OpenRead($zip)
+            $entry = $z.Entries | Where-Object { $_.FullName -like '*/node.exe' } | Select-Object -First 1
+            if ($entry) {
+                New-Item -ItemType Directory -Force -Path (Split-Path $nodeExe) | Out-Null
+                [IO.Compression.ZipFileExtensions]::ExtractToFile($entry, $nodeExe, $true)
+            }
+            $z.Dispose()
+            if ((Test-Path $nodeExe -PathType Leaf) -and ((Get-Item $nodeExe).Length -gt 30MB)) { return $true }
+        } catch {
+        } finally {
+            if (Test-Path $zip) { Remove-Item $zip -Force -ErrorAction SilentlyContinue }
+        }
+    }
+    return $false
+}
+
 Write-Host ''
 Write-Host '================================================' -ForegroundColor White
 $verLine = '   Claude 网关 · 一键部署  v' + $Version
@@ -110,7 +142,6 @@ Write-Host "   安装位置：$Dest" -ForegroundColor DarkGray
 # ---------- 1. 检查文件是否齐全 ----------
 Step '1/7' '检查安装文件'
 $need = @(
-    'payload\gateway\node.exe',
     'payload\gateway\gateway.js',
     'payload\gateway\openai-bridge.js',
     'payload\gateway\restore.js',
@@ -119,8 +150,7 @@ $need = @(
     'payload\gateway\version.json',
     'payload\gateway\tray.ps1',
     'payload\gateway\models.json',
-    'payload\gateway\upstreams.json',
-    'payload\magpie\magpie.exe'
+    'payload\gateway\upstreams.json'
 )
 $missing = @($need | Where-Object { -not (Test-Path (Join-Path $Root $_)) })
 if ($missing.Count -gt 0) {
@@ -128,6 +158,7 @@ if ($missing.Count -gt 0) {
     Read-Host '文件不全，按回车关闭'
     exit 1
 }
+if (Ensure-NodeExe) { Ok 'Node 运行时已就绪' } else { Warn 'Node 运行时准备失败，安装会不完整' }
 Ok '文件齐全'
 
 # ---------- 2. 检查 Claude Desktop ----------
@@ -160,9 +191,14 @@ foreach ($f in Get-ChildItem (Join-Path $Payload 'gateway') -File) {
     Copy-Item $f.FullName $t -Force
     $copied++
 }
-foreach ($f in Get-ChildItem (Join-Path $Payload 'magpie') -File) {
-    Copy-Item $f.FullName (Join-Path $MpDir $f.Name) -Force
-    $copied++
+$mpFiles = @(Get-ChildItem (Join-Path $Payload 'magpie') -File -ErrorAction SilentlyContinue | Where-Object { $_.Name -ne '.gitkeep' })
+if ($mpFiles.Count -gt 0) {
+    foreach ($f in $mpFiles) {
+        Copy-Item $f.FullName (Join-Path $MpDir $f.Name) -Force
+        $copied++
+    }
+} else {
+    Warn '没有提供 magpie.exe，跳过（可以在面板里接其他上游）'
 }
 Ok ("复制 $copied 个文件 → " + $Dest)
 

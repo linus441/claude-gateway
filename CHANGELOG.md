@@ -2,6 +2,16 @@
 
 版本号的唯一来源是 `payload/gateway/version.json`，安装脚本、控制面板和 `/health` 都读它。
 
+## 0.3.2 — 2026-11-21
+
+- 安装脚本自动下载 Node 运行时（nodejs.org，失败回退 npmmirror）
+- `magpie.exe` 改为可选：没有就跳过，不再因缺文件中止安装
+- 补齐 `VERSION.txt`、`省空间说明.txt`
+
+## 0.3.1 — 2026-11-21
+
+- `install-claude.ps1` 自动下载 Claude MSIX 并校验 SHA256
+
 ## 0.3.0 — 2026-11-21
 
 - 上游协议改为自动识别：保存时探一次 `/v1/messages`，403 / 404 判定为 OpenAI 兼容
