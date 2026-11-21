@@ -1,1 +1,150 @@
-Ly8g5LuO6Zu255Sf5oiQIENsYXVkZSBEZXNrdG9wIOeahOOAjOesrOS4ieaWuee9keWFs+OAjemFjee9ruaho++8iDNw77yJCi8vIOeUqOmAlO+8muWFqOaWsOacuuWZqOS4iiBDbGF1ZGUg6KKr55m75b2V6aG1L+WcsOWMuumZkOWItuWNoeS9j+aXtu+8jOebtOaOpeaKiumFjee9ruWGmei/m+WOu++8jOiuqeWug+S4gOWQr+WKqOWwseaYryAzcCDmqKHlvI/jgIIKLy8g55So5rOV77yabm9kZSBib290c3RyYXAuanMgWy0tcXVpZXRdCi8vIOWPquWGmei/meWHoOS4quaWh+S7tu+8jOS4jeWIoOS7u+S9leS4nOilv++8jOaUueWJjemDveWkh+S7ve+8mgovLyAgICVMT0NBTEFQUERBVEElXENsYXVkZS0zcFxjbGF1ZGVfZGVza3RvcF9jb25maWcuanNvbiAgIO+8iGRlcGxveW1lbnRNb2RlID0gM3DvvIkKLy8gICAlTE9DQUxBUFBEQVRBJVxDbGF1ZGUtM3BcY29uZmlnTGlicmFyeVw8dXVpZD4uanNvbiAgICDvvIjnvZHlhbPlnLDlnYAgKyDmqKHlnovooajvvIkKLy8gICAlTE9DQUxBUFBEQVRBJVxDbGF1ZGUtM3BcY29uZmlnTGlicmFyeVxfbWV0YS5qc29uICAgICDvvIjmjIflkJHkuIrpnaLpgqPku73vvIkKCmNvbnN0IGZzID0gcmVxdWlyZSgnZnMnKTsKY29uc3QgcGF0aCA9IHJlcXVpcmUoJ3BhdGgnKTsKY29uc3QgY3J5cHRvID0gcmVxdWlyZSgnY3J5cHRvJyk7Cgpjb25zdCBHVyA9IF9fZGlybmFtZTsKY29uc3QgSE9NRSA9IHByb2Nlc3MuZW52LlVTRVJQUk9GSUxFIHx8IHByb2Nlc3MuZW52LkhPTUU7CmNvbnN0IEFQUERBVEFfTE9DQUwgPSBwcm9jZXNzLmVudi5MT0NBTEFQUERBVEEgfHwgcGF0aC5qb2luKEhPTUUsICdBcHBEYXRhJywgJ0xvY2FsJyk7CmNvbnN0IFJPT1QgPSBwYXRoLmpvaW4oQVBQREFUQV9MT0NBTCwgJ0NsYXVkZS0zcCcpOwpjb25zdCBMSUIgPSBwYXRoLmpvaW4oUk9PVCwgJ2NvbmZpZ0xpYnJhcnknKTsKY29uc3QgREMgPSBwYXRoLmpvaW4oUk9PVCwgJ2NsYXVkZV9kZXNrdG9wX2NvbmZpZy5qc29uJyk7CmNvbnN0IEJBU0UgPSAnaHR0cDovLzEyNy4wLjAuMToxNTcyMic7CmNvbnN0IFFVSUVUID0gcHJvY2Vzcy5hcmd2LmluY2x1ZGVzKCctLXF1aWV0Jyk7Cgpjb25zdCBvdXQgPSBbXTsKZnVuY3Rpb24gc2F5KHMpIHsgb3V0LnB1c2gocyk7IGlmICghUVVJRVQpIGNvbnNvbGUubG9nKHMpOyB9CmZ1bmN0aW9uIHJlYWRKc29uKGYsIGZiKSB7IHRyeSB7IHJldHVybiBKU09OLnBhcnNlKGZzLnJlYWRGaWxlU3luYyhmLCAndXRmOCcpKTsgfSBjYXRjaCAoZSkgeyByZXR1cm4gZmI7IH0gfQpmdW5jdGlvbiBzdGFtcCgpIHsKICBjb25zdCBkID0gbmV3IERhdGUoKTsKICBjb25zdCBwID0gbiA9PiBTdHJpbmcobikucGFkU3RhcnQoMiwgJzAnKTsKICByZXR1cm4gZC5nZXRGdWxsWWVhcigpICsgcChkLmdldE1vbnRoKCkgKyAxKSArIHAoZC5nZXREYXRlKCkpICsgJy0nICsgcChkLmdldEhvdXJzKCkpICsgcChkLmdldE1pbnV0ZXMoKSkgKyBwKGQuZ2V0U2Vjb25kcygpKTsKfQpmdW5jdGlvbiBiYWNrdXAoZikgewogIGlmICghZnMuZXhpc3RzU3luYyhmKSkgcmV0dXJuICcnOwogIGNvbnN0IGIgPSBmICsgJy5iYWstYm9vdHN0cmFwLScgKyBzdGFtcCgpOwogIHRyeSB7IGZzLmNvcHlGaWxlU3luYyhmLCBiKTsgcmV0dXJuIHBhdGguYmFzZW5hbWUoYik7IH0gY2F0Y2ggKGUpIHsgcmV0dXJuICcnOyB9Cn0KZnVuY3Rpb24gdXVpZDQoKSB7CiAgY29uc3QgaCA9IGNyeXB0by5yYW5kb21CeXRlcygxNik7CiAgaFs2XSA9IChoWzZdICYgMHgwZikgfCAweDQwOwogIGhbOF0gPSAoaFs4XSAmIDB4M2YpIHwgMHg4MDsKICBjb25zdCBzID0gaC50b1N0cmluZygnaGV4Jyk7CiAgcmV0dXJuIFtzLnNsaWNlKDAsIDgpLCBzLnNsaWNlKDgsIDEyKSwgcy5zbGljZSgxMiwgMTYpLCBzLnNsaWNlKDE2LCAyMCksIHMuc2xpY2UoMjApXS5qb2luKCctJyk7Cn0KCmZ1bmN0aW9uIHJlYWRLZXkoKSB7CiAgY29uc3QgY2FuZHMgPSBbcGF0aC5qb2luKEdXLCAnZ3cta2V5LnR4dCcpXTsKICBmb3IgKGNvbnN0IGMgb2YgY2FuZHMpIHsKICAgIHRyeSB7CiAgICAgIGNvbnN0IHQgPSBmcy5yZWFkRmlsZVN5bmMoYywgJ3V0ZjgnKS50cmltKCk7CiAgICAgIGlmICh0KSByZXR1cm4gdDsKICAgIH0gY2F0Y2ggKGUpIHt9CiAgfQogIHJldHVybiAnc2stZ2F0ZXdheS1sb2NhbCc7Cn0KCmZ1bmN0aW9uIGJ1aWxkTW9kZWxzKCkgewogIGNvbnN0IGxpc3QgPSByZWFkSnNvbihwYXRoLmpvaW4oR1csICdtb2RlbHMuanNvbicpLCBbXSk7CiAgaWYgKCFBcnJheS5pc0FycmF5KGxpc3QpKSByZXR1cm4gW107CiAgcmV0dXJuIGxpc3QuZmlsdGVyKG0gPT4gbSAmJiBtLmlkKS5tYXAobSA9PiAoewogICAgbmFtZTogbS5pZCwKICAgIGxhYmVsT3ZlcnJpZGU6IG0ubGFiZWwgfHwgbS5pZCwKICAgIGFudGhyb3BpY0ZhbWlseVRpZXI6IG0udGllciB8fCAnc29ubmV0JywKICAgIGlzRmFtaWx5RGVmYXVsdDogISFtLmlzRGVmYXVsdCwKICAgIHN1cHBvcnRzMW06IHRydWUsCiAgICBwcmVmZXIxbTogdHJ1ZQogIH0pKTsKfQoKZnVuY3Rpb24gbWFpbigpIHsKICBjb25zdCBrZXkgPSByZWFkS2V5KCk7CiAgY29uc3QgbW9kZWxzID0gYnVpbGRNb2RlbHMoKTsKCiAgLy8gMSkgQ2xhdWRlLTNwIOagueebruW9lSArIGNvbmZpZ0xpYnJhcnkKICBmcy5ta2RpclN5bmMoTElCLCB7IHJlY3Vyc2l2ZTogdHJ1ZSB9KTsKICBzYXkoJ+ebruW9leWwsee7qu+8micgKyBST09UKTsKCiAgLy8gMikgY2xhdWRlX2Rlc2t0b3BfY29uZmlnLmpzb27vvJpkZXBsb3ltZW50TW9kZSA9IDNwCiAgY29uc3QgZGNCYWsgPSBiYWNrdXAoREMpOwogIGNvbnN0IGRjID0gcmVhZEpzb24oREMsIHt9KSB8fCB7fTsKICBkYy5kZXBsb3ltZW50TW9kZSA9ICczcCc7CiAgaWYgKCFkYy5jb3dvcmtVc2VyRmlsZXNQYXRoKSBkYy5jb3dvcmtVc2VyRmlsZXNQYXRoID0gcGF0aC5qb2luKEhPTUUsICdDbGF1ZGUnKTsKICBmcy53cml0ZUZpbGVTeW5jKERDLCBKU09OLnN0cmluZ2lmeShkYywgbnVsbCwgMiksICd1dGY4Jyk7CiAgc2F5KCcgIGRlcGxveW1lbnRNb2RlID0gM3AnICsgKGRjQmFrID8gJ++8iOWkh+S7vSAnICsgZGNCYWsgKyAn77yJJyA6ICcnKSk7CgogIC8vIDMpIOmAieS4gOS7vemFjee9ruaho++8ml9tZXRhLmpzb24g5oyH55qE6YKj5Lu95Zyo5bCx55So77yM5ZCm5YiZ5paw5bu6CiAgY29uc3QgbWV0YUZpbGUgPSBwYXRoLmpvaW4oTElCLCAnX21ldGEuanNvbicpOwogIGNvbnN0IG1ldGFCYWsgPSBiYWNrdXAobWV0YUZpbGUpOwogIGNvbnN0IG1ldGEgPSByZWFkSnNvbihtZXRhRmlsZSwgbnVsbCkgfHwge307CiAgbGV0IGVudHJpZXMgPSBBcnJheS5pc0FycmF5KG1ldGEuZW50cmllcykgPyBtZXRhLmVudHJpZXMuc2xpY2UoKSA6IFtdOwogIGxldCBpZCA9IHR5cGVvZiBtZXRhLmFwcGxpZWRJZCA9PT0gJ3N0cmluZycgJiYgL15bMC05YS1mLV17MzZ9JC9pLnRlc3QobWV0YS5hcHBsaWVkSWQpID8gbWV0YS5hcHBsaWVkSWQgOiAnJzsKICBpZiAoaWQgJiYgIWZzLmV4aXN0c1N5bmMocGF0aC5qb2luKExJQiwgaWQgKyAnLmpzb24nKSkpIGlkID0gJyc7CiAgbGV0IGFjdGlvbiA9ICdyZXVzZSc7CiAgaWYgKCFpZCkgewogICAgY29uc3QgY2FuZHMgPSBmcy5yZWFkZGlyU3luYyhMSUIpLmZpbHRlcihmID0+IC9eWzAtOWEtZi1dezM2fVwuanNvbiQvaS50ZXN0KGYpKTsKICAgIGlmIChjYW5kcy5sZW5ndGgpIHsKICAgICAgaWQgPSBjYW5kc1swXS5yZXBsYWNlKC9cLmpzb24kLywgJycpOwogICAgICBhY3Rpb24gPSAnYWRvcHQnOwogICAgfSBlbHNlIHsKICAgICAgaWQgPSB1dWlkNCgpOwogICAgICBhY3Rpb24gPSAnY3JlYXRlJzsKICAgIH0KICB9CiAgaWYgKCFlbnRyaWVzLnNvbWUoZSA9PiBlICYmIGUuaWQgPT09IGlkKSkgZW50cmllcy5wdXNoKHsgaWQsIG5hbWU6ICdDbGF1ZGUg572R5YWzJyB9KTsKICBlbnRyaWVzID0gZW50cmllcy5maWx0ZXIoZSA9PiBlICYmIHR5cGVvZiBlLmlkID09PSAnc3RyaW5nJyk7CiAgZnMud3JpdGVGaWxlU3luYyhtZXRhRmlsZSwgSlNPTi5zdHJpbmdpZnkoeyBlbnRyaWVzLCBhcHBsaWVkSWQ6IGlkIH0sIG51bGwsIDIpLCAndXRmOCcpOwogIHNheSgnICDphY3nva7moaMgJyArIGFjdGlvbiArICfvvJonICsgaWQgKyAobWV0YUJhayA/ICfvvIjlpIfku70gJyArIG1ldGFCYWsgKyAn77yJJyA6ICcnKSk7CgogIC8vIDQpIOWGmemCo+S7vemFjee9ruaho+acrOS9kwogIGNvbnN0IHByb2ZGaWxlID0gcGF0aC5qb2luKExJQiwgaWQgKyAnLmpzb24nKTsKICBjb25zdCBwcm9mQmFrID0gYmFja3VwKHByb2ZGaWxlKTsKICBjb25zdCBwID0gcmVhZEpzb24ocHJvZkZpbGUsIHt9KSB8fCB7fTsKICBwLmluZmVyZW5jZVByb3ZpZGVyID0gJ2dhdGV3YXknOwogIHAuaW5mZXJlbmNlR2F0ZXdheUJhc2VVcmwgPSBCQVNFOwogIGlmICghcC5pbmZlcmVuY2VHYXRld2F5QXBpS2V5IHx8ICFTdHJpbmcocC5pbmZlcmVuY2VHYXRld2F5QXBpS2V5KS50cmltKCkpIHAuaW5mZXJlbmNlR2F0ZXdheUFwaUtleSA9IGtleTsKICBwLmluZmVyZW5jZUdhdGV3YXlBdXRoU2NoZW1lID0gJ2JlYXJlcic7CiAgcC5pbmZlcmVuY2VDcmVkZW50aWFsS2luZCA9ICdzdGF0aWMnOwogIHAubW9kZWxEaXNjb3ZlcnlFbmFibGVkID0gdHJ1ZTsKICBwLmRpc2FibGVEZXBsb3ltZW50TW9kZUNob29zZXIgPSB0cnVlOwogIHAuY293b3JrRWdyZXNzQWxsb3dlZEhvc3RzID0gWycqJ107CiAgaWYgKG1vZGVscy5sZW5ndGgpIHAuaW5mZXJlbmNlTW9kZWxzID0gbW9kZWxzOwogIGVsc2UgaWYgKCFBcnJheS5pc0FycmF5KHAuaW5mZXJlbmNlTW9kZWxzKSkgcC5pbmZlcmVuY2VNb2RlbHMgPSBbXTsKICBmcy53cml0ZUZpbGVTeW5jKHByb2ZGaWxlLCBKU09OLnN0cmluZ2lmeShwLCBudWxsLCAyKSwgJ3V0ZjgnKTsKICBzYXkoJyAg5YaZ5YWl572R5YWz5Zyw5Z2AICcgKyBCQVNFICsgJ++8jOaooeWeiyAnICsgcC5pbmZlcmVuY2VNb2RlbHMubGVuZ3RoICsgJyDkuKonICsgKHByb2ZCYWsgPyAn77yI5aSH5Lu9ICcgKyBwcm9mQmFrICsgJ++8iScgOiAnJykpOwoKICBjb25zdCByZXMgPSB7CiAgICBvazogdHJ1ZSwKICAgIGFjdGlvbiwKICAgIGlkLAogICAgcm9vdDogUk9PVCwKICAgIHByb2ZpbGU6IHByb2ZGaWxlLAogICAgZGVwbG95bWVudE1vZGU6ICczcCcsCiAgICBtb2RlbHM6IHAuaW5mZXJlbmNlTW9kZWxzLmxlbmd0aCwKICAgIGtleUtpbmQ6IFN0cmluZyhwLmluZmVyZW5jZUdhdGV3YXlBcGlLZXkpLnN0YXJ0c1dpdGgoJ19fc2VhbGVkX18nKSA/ICdzZWFsZWQnIDogJ3BsYWluJywKICAgIGxvZzogb3V0CiAgfTsKICByZXR1cm4gcmVzOwp9Cgptb2R1bGUuZXhwb3J0cyA9IHsgYm9vdHN0cmFwOiBtYWluLCBST09ULCBMSUIsIERDLCBCQVNFIH07CgppZiAocmVxdWlyZS5tYWluID09PSBtb2R1bGUpIHsKICB0cnkgewogICAgY29uc3QgciA9IG1haW4oKTsKICAgIGlmIChwcm9jZXNzLmFyZ3YuaW5jbHVkZXMoJy0tanNvbicpKSBwcm9jZXNzLnN0ZG91dC53cml0ZShKU09OLnN0cmluZ2lmeShyKSk7CiAgICBlbHNlIGNvbnNvbGUubG9nKCdcbuWujOaIkOOAguS4i+S4gOatpe+8muWujOWFqOmAgOWHuiBDbGF1ZGXvvIjku7vliqHmoI/lj7PplK4g4oaSIOmAgOWHuu+8ie+8jOWGjemHjeaWsOaJk+W8gOOAgicpOwogICAgcHJvY2Vzcy5leGl0KDApOwogIH0gY2F0Y2ggKGUpIHsKICAgIGlmIChwcm9jZXNzLmFyZ3YuaW5jbHVkZXMoJy0tanNvbicpKSBwcm9jZXNzLnN0ZG91dC53cml0ZShKU09OLnN0cmluZ2lmeSh7IG9rOiBmYWxzZSwgZXJyb3I6IGUubWVzc2FnZSB9KSk7CiAgICBlbHNlIHsgY29uc29sZS5lcnJvcign5aSx6LSl77yaJyArIGUubWVzc2FnZSk7IH0KICAgIHByb2Nlc3MuZXhpdCgxKTsKICB9Cn0K
+// 从零生成 Claude Desktop 的「第三方网关」配置档（3p）
+// 用途：全新机器上 Claude 被登录页/地区限制卡住时，直接把配置写进去，让它一启动就是 3p 模式。
+// 用法：node bootstrap.js [--quiet]
+// 只写这几个文件，不删任何东西，改前都备份：
+//   %LOCALAPPDATA%\Claude-3p\claude_desktop_config.json   （deploymentMode = 3p）
+//   %LOCALAPPDATA%\Claude-3p\configLibrary\<uuid>.json    （网关地址 + 模型表）
+//   %LOCALAPPDATA%\Claude-3p\configLibrary\_meta.json     （指向上面那份）
+
+const fs = require('fs');
+const path = require('path');
+const crypto = require('crypto');
+
+const GW = __dirname;
+const HOME = process.env.USERPROFILE || process.env.HOME;
+const APPDATA_LOCAL = process.env.LOCALAPPDATA || path.join(HOME, 'AppData', 'Local');
+const ROOT = path.join(APPDATA_LOCAL, 'Claude-3p');
+const LIB = path.join(ROOT, 'configLibrary');
+const DC = path.join(ROOT, 'claude_desktop_config.json');
+const BASE = 'http://127.0.0.1:15722';
+const QUIET = process.argv.includes('--quiet');
+
+const out = [];
+function say(s) { out.push(s); if (!QUIET) console.log(s); }
+function readJson(f, fb) { try { return JSON.parse(fs.readFileSync(f, 'utf8')); } catch (e) { return fb; } }
+function stamp() {
+  const d = new Date();
+  const p = n => String(n).padStart(2, '0');
+  return d.getFullYear() + p(d.getMonth() + 1) + p(d.getDate()) + '-' + p(d.getHours()) + p(d.getMinutes()) + p(d.getSeconds());
+}
+function backup(f) {
+  if (!fs.existsSync(f)) return '';
+  const b = f + '.bak-bootstrap-' + stamp();
+  try { fs.copyFileSync(f, b); return path.basename(b); } catch (e) { return ''; }
+}
+function uuid4() {
+  const h = crypto.randomBytes(16);
+  h[6] = (h[6] & 0x0f) | 0x40;
+  h[8] = (h[8] & 0x3f) | 0x80;
+  const s = h.toString('hex');
+  return [s.slice(0, 8), s.slice(8, 12), s.slice(12, 16), s.slice(16, 20), s.slice(20)].join('-');
+}
+
+function readKey() {
+  const cands = [path.join(GW, 'gw-key.txt')];
+  for (const c of cands) {
+    try {
+      const t = fs.readFileSync(c, 'utf8').trim();
+      if (t) return t;
+    } catch (e) {}
+  }
+  return 'sk-gateway-local';
+}
+
+function buildModels() {
+  const list = readJson(path.join(GW, 'models.json'), []);
+  if (!Array.isArray(list)) return [];
+  return list.filter(m => m && m.id).map(m => ({
+    name: m.id,
+    labelOverride: m.label || m.id,
+    anthropicFamilyTier: m.tier || 'sonnet',
+    isFamilyDefault: !!m.isDefault,
+    supports1m: true,
+    prefer1m: true
+  }));
+}
+
+function main() {
+  const key = readKey();
+  const models = buildModels();
+
+  // 1) Claude-3p 根目录 + configLibrary
+  fs.mkdirSync(LIB, { recursive: true });
+  say('目录就绪：' + ROOT);
+
+  // 2) claude_desktop_config.json：deploymentMode = 3p
+  const dcBak = backup(DC);
+  const dc = readJson(DC, {}) || {};
+  dc.deploymentMode = '3p';
+  if (!dc.coworkUserFilesPath) dc.coworkUserFilesPath = path.join(HOME, 'Claude');
+  fs.writeFileSync(DC, JSON.stringify(dc, null, 2), 'utf8');
+  say('  deploymentMode = 3p' + (dcBak ? '（备份 ' + dcBak + '）' : ''));
+
+  // 3) 选一份配置档：_meta.json 指的那份在就用，否则新建
+  const metaFile = path.join(LIB, '_meta.json');
+  const metaBak = backup(metaFile);
+  const meta = readJson(metaFile, null) || {};
+  let entries = Array.isArray(meta.entries) ? meta.entries.slice() : [];
+  let id = typeof meta.appliedId === 'string' && /^[0-9a-f-]{36}$/i.test(meta.appliedId) ? meta.appliedId : '';
+  if (id && !fs.existsSync(path.join(LIB, id + '.json'))) id = '';
+  let action = 'reuse';
+  if (!id) {
+    const cands = fs.readdirSync(LIB).filter(f => /^[0-9a-f-]{36}\.json$/i.test(f));
+    if (cands.length) {
+      id = cands[0].replace(/\.json$/, '');
+      action = 'adopt';
+    } else {
+      id = uuid4();
+      action = 'create';
+    }
+  }
+  if (!entries.some(e => e && e.id === id)) entries.push({ id, name: 'Claude 网关' });
+  entries = entries.filter(e => e && typeof e.id === 'string');
+  fs.writeFileSync(metaFile, JSON.stringify({ entries, appliedId: id }, null, 2), 'utf8');
+  say('  配置档 ' + action + '：' + id + (metaBak ? '（备份 ' + metaBak + '）' : ''));
+
+  // 4) 写那份配置档本体
+  const profFile = path.join(LIB, id + '.json');
+  const profBak = backup(profFile);
+  const p = readJson(profFile, {}) || {};
+  p.inferenceProvider = 'gateway';
+  p.inferenceGatewayBaseUrl = BASE;
+  if (!p.inferenceGatewayApiKey || !String(p.inferenceGatewayApiKey).trim()) p.inferenceGatewayApiKey = key;
+  p.inferenceGatewayAuthScheme = 'bearer';
+  p.inferenceCredentialKind = 'static';
+  p.modelDiscoveryEnabled = true;
+  p.disableDeploymentModeChooser = true;
+  p.coworkEgressAllowedHosts = ['*'];
+  if (models.length) p.inferenceModels = models;
+  else if (!Array.isArray(p.inferenceModels)) p.inferenceModels = [];
+  fs.writeFileSync(profFile, JSON.stringify(p, null, 2), 'utf8');
+  say('  写入网关地址 ' + BASE + '，模型 ' + p.inferenceModels.length + ' 个' + (profBak ? '（备份 ' + profBak + '）' : ''));
+
+  const res = {
+    ok: true,
+    action,
+    id,
+    root: ROOT,
+    profile: profFile,
+    deploymentMode: '3p',
+    models: p.inferenceModels.length,
+    keyKind: String(p.inferenceGatewayApiKey).startsWith('__sealed__') ? 'sealed' : 'plain',
+    log: out
+  };
+  return res;
+}
+
+module.exports = { bootstrap: main, ROOT, LIB, DC, BASE };
+
+if (require.main === module) {
+  try {
+    const r = main();
+    if (process.argv.includes('--json')) process.stdout.write(JSON.stringify(r));
+    else console.log('\n完成。下一步：完全退出 Claude（任务栏右键 → 退出），再重新打开。');
+    process.exit(0);
+  } catch (e) {
+    if (process.argv.includes('--json')) process.stdout.write(JSON.stringify({ ok: false, error: e.message }));
+    else { console.error('失败：' + e.message); }
+    process.exit(1);
+  }
+}

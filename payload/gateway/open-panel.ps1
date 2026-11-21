@@ -1,1 +1,38 @@
-IyBPcGVuIHRoZSBjb250cm9sIHBhbmVsOiBtYWtlIHN1cmUgdGhlIHRyYXkgYXBwIChhbmQgZ2F0ZXdheSkgaXMgdXAsCiMgdGhlbiBvcGVuIGFuIEVkZ2UgYXBwIHdpbmRvdy4gQ2FsbGVkIGhpZGRlbi4gRG9lcyBub3Qgc3RheSBpbiBtZW1vcnkuCgokRXJyb3JBY3Rpb25QcmVmZXJlbmNlID0gJ1NpbGVudGx5Q29udGludWUnCiRndyA9ICRQU1NjcmlwdFJvb3QKaWYgKC1ub3QgJGd3KSB7ICRndyA9IFNwbGl0LVBhdGggLVBhcmVudCAkTXlJbnZvY2F0aW9uLk15Q29tbWFuZC5QYXRoIH0KJHBvcnQgPSAxNTcyMgokdXJsID0gImh0dHA6Ly8xMjcuMC4wLjE6JHBvcnQvYWRtaW4iCgpmdW5jdGlvbiBUZXN0LVBvcnQoW2ludF0kcCkgewogICRjID0gTmV3LU9iamVjdCBTeXN0ZW0uTmV0LlNvY2tldHMuVGNwQ2xpZW50CiAgdHJ5IHsKICAgICRpYXIgPSAkYy5CZWdpbkNvbm5lY3QoJzEyNy4wLjAuMScsICRwLCAkbnVsbCwgJG51bGwpCiAgICBpZiAoJGlhci5Bc3luY1dhaXRIYW5kbGUuV2FpdE9uZSg2MDApIC1hbmQgJGMuQ29ubmVjdGVkKSB7IHJldHVybiAkdHJ1ZSB9CiAgICByZXR1cm4gJGZhbHNlCiAgfSBjYXRjaCB7IHJldHVybiAkZmFsc2UgfSBmaW5hbGx5IHsgJGMuQ2xvc2UoKSB9Cn0KCiMgdXNlciBleHBsaWNpdGx5IGFza2VkIGZvciB0aGUgcGFuZWwgLT4gY2xlYXIgdGhlICJxdWl0IiBmbGFnClJlbW92ZS1JdGVtIC1MaXRlcmFsUGF0aCAiJGd3XC50cmF5LW9mZiIgLUZvcmNlIC1FcnJvckFjdGlvbiBTaWxlbnRseUNvbnRpbnVlCgppZiAoLW5vdCAoVGVzdC1Qb3J0ICRwb3J0KSkgewogICMgc3RhcnQgdGhlIHRyYXkgYXBwIHRocm91Z2ggaXRzIHdpbmRvd2xlc3MgLnZicyBsYXVuY2hlciAoU2hlbGxFeGVjdXRlLCBubyBjb25zb2xlKQogIGlmIChUZXN0LVBhdGggIiRnd1x0cmF5LWxhdW5jaC52YnMiKSB7CiAgICBTdGFydC1Qcm9jZXNzIC1GaWxlUGF0aCAiJGd3XHRyYXktbGF1bmNoLnZicyIKICB9CiAgZm9yICgkaSA9IDA7ICRpIC1sdCAzMDsgJGkrKykgewogICAgU3RhcnQtU2xlZXAgLU1pbGxpc2Vjb25kcyA0MDAKICAgIGlmIChUZXN0LVBvcnQgJHBvcnQpIHsgYnJlYWsgfQogIH0KfQoKJGVkZ2UgPSAnQzpcUHJvZ3JhbSBGaWxlcyAoeDg2KVxNaWNyb3NvZnRcRWRnZVxBcHBsaWNhdGlvblxtc2VkZ2UuZXhlJwppZiAoVGVzdC1QYXRoICRlZGdlKSB7CiAgU3RhcnQtUHJvY2VzcyAtRmlsZVBhdGggJGVkZ2UgLUFyZ3VtZW50TGlzdCAiLS1hcHA9JHVybCIsICItLXdpbmRvdy1zaXplPTkyMCw3NjAiCn0gZWxzZSB7CiAgU3RhcnQtUHJvY2VzcyAkdXJsCn0K
+# Open the control panel: make sure the tray app (and gateway) is up,
+# then open an Edge app window. Called hidden. Does not stay in memory.
+
+$ErrorActionPreference = 'SilentlyContinue'
+$gw = $PSScriptRoot
+if (-not $gw) { $gw = Split-Path -Parent $MyInvocation.MyCommand.Path }
+$port = 15722
+$url = "http://127.0.0.1:$port/admin"
+
+function Test-Port([int]$p) {
+  $c = New-Object System.Net.Sockets.TcpClient
+  try {
+    $iar = $c.BeginConnect('127.0.0.1', $p, $null, $null)
+    if ($iar.AsyncWaitHandle.WaitOne(600) -and $c.Connected) { return $true }
+    return $false
+  } catch { return $false } finally { $c.Close() }
+}
+
+# user explicitly asked for the panel -> clear the "quit" flag
+Remove-Item -LiteralPath "$gw\.tray-off" -Force -ErrorAction SilentlyContinue
+
+if (-not (Test-Port $port)) {
+  # start the tray app through its windowless .vbs launcher (ShellExecute, no console)
+  if (Test-Path "$gw\tray-launch.vbs") {
+    Start-Process -FilePath "$gw\tray-launch.vbs"
+  }
+  for ($i = 0; $i -lt 30; $i++) {
+    Start-Sleep -Milliseconds 400
+    if (Test-Port $port) { break }
+  }
+}
+
+$edge = 'C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe'
+if (Test-Path $edge) {
+  Start-Process -FilePath $edge -ArgumentList "--app=$url", "--window-size=920,760"
+} else {
+  Start-Process $url
+}

@@ -1,1 +1,13 @@
-ewogICJ2ZXJzaW9uIjogMSwKICAidXBzdHJlYW1zIjogWwogICAgewogICAgICAiaWQiOiAibWFncGllIiwKICAgICAgImxhYmVsIjogIk1hZ3BpZSIsCiAgICAgICJiYXNlVXJsIjogImh0dHA6Ly8xMjcuMC4wLjE6MzQyNSIsCiAgICAgICJhcGlLZXkiOiAibWFncGllIiwKICAgICAgIm1vZGVsc1BhdGgiOiAiL3YxL21vZGVscyIsCiAgICAgICJidWlsdGluIjogdHJ1ZQogICAgfQogIF0KfQo=
+{
+  "version": 1,
+  "upstreams": [
+    {
+      "id": "magpie",
+      "label": "Magpie",
+      "baseUrl": "http://127.0.0.1:3425",
+      "apiKey": "magpie",
+      "modelsPath": "/v1/models",
+      "builtin": true
+    }
+  ]
+}

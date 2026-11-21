@@ -1,1 +1,7 @@
-JyBDbGF1ZGUgZ2F0ZXdheSBjb250cm9sIHBhbmVsIGxhdW5jaGVyCicgRG91YmxlLWNsaWNrOiBvcGVucyB0aGUgcGFuZWwgaW4gYW4gRWRnZSBhcHAgd2luZG93IChubyBhZGRyZXNzIGJhciwgbm8gY29uc29sZSkKJyBQYXRoIGlzIHJlc29sdmVkIGZyb20gdGhpcyBzY3JpcHQncyBvd24gZm9sZGVyLCBzbyB0aGUgcGFja2FnZSBjYW4gc2l0IGFueXdoZXJlLgpTZXQgZnNvID0gQ3JlYXRlT2JqZWN0KCJTY3JpcHRpbmcuRmlsZVN5c3RlbU9iamVjdCIpClNldCBzaCA9IENyZWF0ZU9iamVjdCgiV1NjcmlwdC5TaGVsbCIpCmRpciA9IGZzby5HZXRQYXJlbnRGb2xkZXJOYW1lKFdTY3JpcHQuU2NyaXB0RnVsbE5hbWUpCnNoLlJ1biAicG93ZXJzaGVsbC5leGUgLU5vUHJvZmlsZSAtRXhlY3V0aW9uUG9saWN5IEJ5cGFzcyAtV2luZG93U3R5bGUgSGlkZGVuIC1GaWxlICIiIiAmIGRpciAmICJcb3Blbi1wYW5lbC5wczEiIiIsIDAsIEZhbHNlCg==
+' Claude gateway control panel launcher
+' Double-click: opens the panel in an Edge app window (no address bar, no console)
+' Path is resolved from this script's own folder, so the package can sit anywhere.
+Set fso = CreateObject("Scripting.FileSystemObject")
+Set sh = CreateObject("WScript.Shell")
+dir = fso.GetParentFolderName(WScript.ScriptFullName)
+sh.Run "powershell.exe -NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File """ & dir & "\open-panel.ps1""", 0, False

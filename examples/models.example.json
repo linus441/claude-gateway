@@ -1,1 +1,20 @@
-WwogIHsKICAgICJpZCI6ICJjbGF1ZGUtb3B1cy01IiwKICAgICJ0YXJnZXQiOiAiZGVlcHNlZWstcmVhc29uZXIiLAogICAgInVwc3RyZWFtIjogImRlZXBzZWVrIiwKICAgICJsYWJlbCI6ICJEZWVwU2VlayBSZWFzb25lciIsCiAgICAidGllciI6ICJvcHVzIiwKICAgICJpc0RlZmF1bHQiOiB0cnVlLAogICAgImN0eCI6IDEwMDAwMDAKICB9LAogIHsKICAgICJpZCI6ICJjbGF1ZGUtc29ubmV0LTUiLAogICAgInRhcmdldCI6ICJncHQtNi4yLXNvbCIsCiAgICAidXBzdHJlYW0iOiAicmVsYXkiLAogICAgImxhYmVsIjogIkdQVC02LjIgU29sIMK3IOS4rei9rCIsCiAgICAidGllciI6ICJzb25uZXQiLAogICAgImlzRGVmYXVsdCI6IHRydWUsCiAgICAiY3R4IjogMTAwMDAwMAogIH0KXQo=
+[
+  {
+    "id": "claude-opus-5",
+    "target": "deepseek-reasoner",
+    "upstream": "deepseek",
+    "label": "DeepSeek Reasoner",
+    "tier": "opus",
+    "isDefault": true,
+    "ctx": 1000000
+  },
+  {
+    "id": "claude-sonnet-5",
+    "target": "gpt-6.2-sol",
+    "upstream": "relay",
+    "label": "GPT-6.2 Sol · 中转",
+    "tier": "sonnet",
+    "isDefault": true,
+    "ctx": 1000000
+  }
+]

@@ -1,1 +1,9 @@
-JyBMYXVuY2ggdGhlIENsYXVkZSBnYXRld2F5IHRyYXkgYXBwIHdpdGggbm8gdmlzaWJsZSB3aW5kb3cuCicgUG93ZXJTaGVsbCBpdHNlbGYgc3RhcnRzIGhpZGRlbiAod2luZG93IHN0eWxlIDApIGFuZCB0aGVuIHN0YXJ0cyBub2RlCicgd2l0aCBDUkVBVEVfTk9fV0lORE9XLCBzbyBubyBjb25zb2xlIHdpbmRvdyBldmVyIGFwcGVhcnMuCicgUGF0aCBpcyByZXNvbHZlZCBmcm9tIHRoaXMgc2NyaXB0J3Mgb3duIGZvbGRlciwgc28gdGhlIHBhY2thZ2UgY2FuIHNpdCBhbnl3aGVyZS4KU2V0IGZzbyA9IENyZWF0ZU9iamVjdCgiU2NyaXB0aW5nLkZpbGVTeXN0ZW1PYmplY3QiKQpTZXQgc2ggPSBDcmVhdGVPYmplY3QoIldTY3JpcHQuU2hlbGwiKQpkaXIgPSBmc28uR2V0UGFyZW50Rm9sZGVyTmFtZShXU2NyaXB0LlNjcmlwdEZ1bGxOYW1lKQpjbWQgPSAicG93ZXJzaGVsbC5leGUgLU5vUHJvZmlsZSAtRXhlY3V0aW9uUG9saWN5IEJ5cGFzcyAtV2luZG93U3R5bGUgSGlkZGVuIC1GaWxlICIiIiAmIGRpciAmICJcdHJheS5wczEiIiIKc2guUnVuIGNtZCwgMCwgRmFsc2UK
+' Launch the Claude gateway tray app with no visible window.
+' PowerShell itself starts hidden (window style 0) and then starts node
+' with CREATE_NO_WINDOW, so no console window ever appears.
+' Path is resolved from this script's own folder, so the package can sit anywhere.
+Set fso = CreateObject("Scripting.FileSystemObject")
+Set sh = CreateObject("WScript.Shell")
+dir = fso.GetParentFolderName(WScript.ScriptFullName)
+cmd = "powershell.exe -NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File """ & dir & "\tray.ps1"""
+sh.Run cmd, 0, False

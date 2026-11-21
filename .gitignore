@@ -1,1 +1,22 @@
-IyDkuozov5vliLbvvIjoh6rooYzmlL7lhaUgcGF5bG9hZCDlr7nlupTnm67lvZXvvIzop4EgUkVBRE1F77yJCnBheWxvYWQvZ2F0ZXdheS9ub2RlLmV4ZQpwYXlsb2FkL21hZ3BpZS9tYWdwaWUuZXhlCnBheWxvYWQvbWFncGllL21hZ3BpZS5jb20KcGF5bG9hZC9tYWdwaWUvU0hBMjU2U1VNUwpwYXlsb2FkL2NsYXVkZS8qLm1zaXgKCiMg6L+Q6KGM5pe25Lqn54mpCioubG9nCioubG9nLjEKc25hcHNob3RzLwoudHJheS1vZmYKZ3cta2V5LnR4dAoKIyDphY3nva7lpIfku70KKi5iYWsKKi5iYWstKgoKIyDns7vnu5/mlofku7YKVGh1bWJzLmRiCmRlc2t0b3AuaW5pCi5EU19TdG9yZQo=
+# 二进制（自行放入 payload 对应目录，见 README）
+payload/gateway/node.exe
+payload/magpie/magpie.exe
+payload/magpie/magpie.com
+payload/magpie/SHA256SUMS
+payload/claude/*.msix
+
+# 运行时产物
+*.log
+*.log.1
+snapshots/
+.tray-off
+gw-key.txt
+
+# 配置备份
+*.bak
+*.bak-*
+
+# 系统文件
+Thumbs.db
+desktop.ini
+.DS_Store

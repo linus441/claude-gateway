@@ -1,1 +1,25 @@
-IyDlj5jmm7TorrDlvZUKCueJiOacrOWPt+eahOWUr+S4gOadpea6kOaYryBgcGF5bG9hZC9nYXRld2F5L3ZlcnNpb24uanNvbmDvvIzlronoo4XohJrmnKzjgIHmjqfliLbpnaLmnb/lkowgYC9oZWFsdGhgIOmDveivu+Wug+OAggoKIyMgMC4zLjAg4oCUIDIwMjYtMTEtMjEKCi0g5LiK5ri45Y2P6K6u5pS55Li66Ieq5Yqo6K+G5Yir77ya5L+d5a2Y5pe25o6i5LiA5qyhIGAvdjEvbWVzc2FnZXNg77yMNDAzIC8gNDA0IOWIpOWumuS4uiBPcGVuQUkg5YW85a65Ci0g56e76Zmk44CM5LiK5ri45Y2P6K6u44CN5LiL5ouJ77yM6YG/5YWN6YCJ6ZSZ5a+86Ie0IGA0MDMgVGhpcyBncm91cCBkb2VzIG5vdCBhbGxvdyAvdjEvbWVzc2FnZXMgZGlzcGF0Y2hgCi0g6K+G5Yir57uT5p6c5a2Y6L+bIGB1cHN0cmVhbXMuanNvbmDvvIzmlLnmmL7npLrlkI3kuI3kvJrph43mlrDmjqLmtYsKLSDmjqjnkIbmqKHlnovliKTmlq3ku44gYGdwdC01YCDmianlsZXliLAgYGdwdC01YCB+IGBncHQtOWAKLSDkv67lpI3mqKHlnovmjIflkJHnmoTkuIrmuLjkuI3lrZjlnKjml7bov57mjqXmsLjkuYXmjILmrbsKLSDkv67lpI3mtYHlvI/kuIrmuLggc29ja2V0IOaWreW8gOaXtui/nuaOpeawuOS5heaMguatuwotIOS/ruWkjea1geW8jyBgY29udGVudF9ibG9ja19zdG9wYCDpobrluo/lj6/og73lkowgYGNvbnRlbnRfYmxvY2tfc3RhcnRgIOS4jeS4gOiHtAoKIyMgMC4yLjAg4oCUIDIwMjYtMTEtMjEKCi0g5paw5aKeIGBvcGVuYWktYnJpZGdlLmpzYO+8mkFudGhyb3BpYyDihpQgT3BlbkFJIENoYXQgQ29tcGxldGlvbnMg5Y+M5ZCR6L2s5o2iCi0gQ2xhdWRlIERlc2t0b3Ag5a6J6KOF5LuO5LiA6ZSu6YOo572y5Lit5ouG5Ye677yM5pS55Li654us56uL5a6J6KOF5ZmoCi0g5qGM6Z2i5YiG5Yir5Yib5bu6IE1hZ3BpZSDlkowgQ2xhdWRlIOWbvuaghwotIOaJmOebmOS4jumdouadv+aWh+ahiOaUueS4uuOAjOmHjeWQry/miZPlvIDjgI0KLSDjgIzkuIDplK7mgaLlpI3phY3nva7jgI3mlLnkuLrjgIzmgaLlpI3ljp/oo4UgQ2xhdWRlIOiuvue9ruOAjQoKIyMgMC4xLjAg4oCUIDIwMjYtMTEtMjAKCi0g6aaW5Liq5Y+v55So54mI5pys77ya572R5YWz44CB5omY55uY44CB5o6n5Yi26Z2i5p2/44CBM3Ag6YWN572u55Sf5oiQCg==
+# 变更记录
+
+版本号的唯一来源是 `payload/gateway/version.json`，安装脚本、控制面板和 `/health` 都读它。
+
+## 0.3.0 — 2026-11-21
+
+- 上游协议改为自动识别：保存时探一次 `/v1/messages`，403 / 404 判定为 OpenAI 兼容
+- 移除「上游协议」下拉，避免选错导致 `403 This group does not allow /v1/messages dispatch`
+- 识别结果存进 `upstreams.json`，改显示名不会重新探测
+- 推理模型判断从 `gpt-5` 扩展到 `gpt-5` ~ `gpt-9`
+- 修复模型指向的上游不存在时连接永久挂死
+- 修复流式上游 socket 断开时连接永久挂死
+- 修复流式 `content_block_stop` 顺序可能和 `content_block_start` 不一致
+
+## 0.2.0 — 2026-11-21
+
+- 新增 `openai-bridge.js`：Anthropic ↔ OpenAI Chat Completions 双向转换
+- Claude Desktop 安装从一键部署中拆出，改为独立安装器
+- 桌面分别创建 Magpie 和 Claude 图标
+- 托盘与面板文案改为「重启/打开」
+- 「一键恢复配置」改为「恢复原装 Claude 设置」
+
+## 0.1.0 — 2026-11-20
+
+- 首个可用版本：网关、托盘、控制面板、3p 配置生成

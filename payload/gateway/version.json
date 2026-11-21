@@ -1,1 +1,5 @@
-ewogICJ2ZXJzaW9uIjogIjAuMy4wIiwKICAiZGF0ZSI6ICIyMDI2LTExLTIxIiwKICAibmFtZSI6ICJDbGF1ZGUgR2F0ZXdheSBQYWNrYWdlIgp9Cg==
+{
+  "version": "0.3.0",
+  "date": "2026-11-21",
+  "name": "Claude Gateway Package"
+}

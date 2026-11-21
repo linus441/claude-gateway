@@ -1,1 +1,10 @@
-QGVjaG8gb2ZmCnNldGxvY2FsCmNkIC9kICIlfmRwMCIKaWYgbm90IGV4aXN0ICIlfmRwMGluc3RhbGwucHMxIiAoCiAgZWNobyBpbnN0YWxsLnBzMSBub3QgZm91bmQuIFBsZWFzZSBleHRyYWN0IHRoZSB3aG9sZSBhcmNoaXZlIGZpcnN0LgogIHBhdXNlCiAgZXhpdCAvYiAxCikKZWNobyBTdGFydGluZyBpbnN0YWxsZXIuLi4KcG93ZXJzaGVsbCAtTm9Qcm9maWxlIC1FeGVjdXRpb25Qb2xpY3kgQnlwYXNzIC1GaWxlICIlfmRwMGluc3RhbGwucHMxIgo=
+@echo off
+setlocal
+cd /d "%~dp0"
+if not exist "%~dp0install.ps1" (
+  echo install.ps1 not found. Please extract the whole archive first.
+  pause
+  exit /b 1
+)
+echo Starting installer...
+powershell -NoProfile -ExecutionPolicy Bypass -File "%~dp0install.ps1"

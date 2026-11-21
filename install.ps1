@@ -1,1 +1,288 @@
-77u/IyBDbGF1ZGUg572R5YWzIMK3IOS4gOmUrumDqOe9su+8iOe9keWFsyArIE1hZ3BpZe+8m0NsYXVkZSBEZXNrdG9wIOWNleeLrOWuieijhe+8iQojIOWBmuS7gOS5iO+8muWkjeWItue9keWFs+S4jiBNYWdwaWUg4oaSIOeUn+aIkOWvhumSpeS4juepuumFjee9riDihpIg5bu66Ieq5ZCv5ZKM5qGM6Z2i5Zu+5qCHIOKGkiDlkK/liqgKIyDnibnngrnvvJrkuI3luKbku7vkvZXljp/mnInphY3nva7jgILmqKHlnovooajkuLrnqbrvvIzkuIrmuLjlj6rnlZnlhoXnva7nmoQgTWFncGll77yM5YW25L2Z55Sx5L2g6KOF5a6M5ZCO6Ieq5bex5Yqg44CCCgokRXJyb3JBY3Rpb25QcmVmZXJlbmNlID0gJ1N0b3AnCgojIC0tLS0tLS0tLS0gMC4g566h55CG5ZGY5p2D6ZmQIC0tLS0tLS0tLS0KJGlzQWRtaW4gPSAoW1NlY3VyaXR5LlByaW5jaXBhbC5XaW5kb3dzUHJpbmNpcGFsXVtTZWN1cml0eS5QcmluY2lwYWwuV2luZG93c0lkZW50aXR5XTo6R2V0Q3VycmVudCgpKS5Jc0luUm9sZShbU2VjdXJpdHkuUHJpbmNpcGFsLldpbmRvd3NCdWlsdEluUm9sZV06OkFkbWluaXN0cmF0b3IpCmlmICgtbm90ICRpc0FkbWluKSB7CiAgICBXcml0ZS1Ib3N0ICcnCiAgICBXcml0ZS1Ib3N0ICcgIOmcgOimgeeuoeeQhuWRmOadg+mZkO+8iOWuieijhee9keWFsy/moYzpnaLlm77moIcv6Ieq5ZCv55So77yJ77yM5q2j5Zyo55Sz6K+34oCmJyAtRm9yZWdyb3VuZENvbG9yIFllbGxvdwogICAgdHJ5IHsKICAgICAgICBTdGFydC1Qcm9jZXNzIHBvd2Vyc2hlbGwgLVZlcmIgUnVuQXMgLUFyZ3VtZW50TGlzdCBAKCctTm9Qcm9maWxlJywgJy1FeGVjdXRpb25Qb2xpY3knLCAnQnlwYXNzJywgJy1GaWxlJywgImAiJFBTQ29tbWFuZFBhdGhgIiIpCiAgICB9IGNhdGNoIHsKICAgICAgICBXcml0ZS1Ib3N0ICcgIOaPkOadg+iiq+aLkue7ne+8jOWuieijheS4reatouOAgicgLUZvcmVncm91bmRDb2xvciBSZWQKICAgICAgICBSZWFkLUhvc3QgJ+aMieWbnui9puWFs+mXrScKICAgIH0KICAgIGV4aXQKfQoKJFJvb3QgICAgPSAkUFNTY3JpcHRSb290CiRQYXlsb2FkID0gSm9pbi1QYXRoICRSb290ICdwYXlsb2FkJwokVmVyc2lvbiA9ICd1bmtub3duJwokVmVyc2lvbkRhdGUgPSAnJwp0cnkgewogICAgJHZpID0gR2V0LUNvbnRlbnQgKEpvaW4tUGF0aCAkUGF5bG9hZCAnZ2F0ZXdheVx2ZXJzaW9uLmpzb24nKSAtUmF3IC1FbmNvZGluZyBVVEY4IC1FcnJvckFjdGlvbiBTdG9wIHwgQ29udmVydEZyb20tSnNvbgogICAgaWYgKCR2aS52ZXJzaW9uKSB7ICRWZXJzaW9uID0gW3N0cmluZ10kdmkudmVyc2lvbiB9CiAgICBpZiAoJHZpLmRhdGUpIHsgJFZlcnNpb25EYXRlID0gW3N0cmluZ10kdmkuZGF0ZSB9Cn0gY2F0Y2gge30KJERlc3QgICAgPSBKb2luLVBhdGggJGVudjpMT0NBTEFQUERBVEEgJ0NsYXVkZUdhdGV3YXknCiRHd0RpciAgID0gSm9pbi1QYXRoICREZXN0ICdnYXRld2F5JwokTXBEaXIgICA9IEpvaW4tUGF0aCAkRGVzdCAnbWFncGllJwokUG9ydCAgICA9IDE1NzIyCgpmdW5jdGlvbiBTdGVwKCRuLCAkdCkgeyBXcml0ZS1Ib3N0ICJgblskbl0gJHQiIC1Gb3JlZ3JvdW5kQ29sb3IgQ3lhbiB9CmZ1bmN0aW9uIE9rKCRtKSAgIHsgV3JpdGUtSG9zdCAiICAgICBPSyAgICRtIiAtRm9yZWdyb3VuZENvbG9yIEdyZWVuIH0KZnVuY3Rpb24gV2FybigkbSkgeyBXcml0ZS1Ib3N0ICIgICAgICEgICAgJG0iIC1Gb3JlZ3JvdW5kQ29sb3IgWWVsbG93IH0KZnVuY3Rpb24gRmFpbCgkbSkgeyBXcml0ZS1Ib3N0ICIgICAgIFggICAgJG0iIC1Gb3JlZ3JvdW5kQ29sb3IgUmVkIH0KCmZ1bmN0aW9uIE5ldy1DbGF1ZGVTaG9ydGN1dCgkcGtnKSB7CiAgICAkZGVzayA9IFtFbnZpcm9ubWVudF06OkdldEZvbGRlclBhdGgoJ0Rlc2t0b3AnKQogICAgJGxuayA9IEpvaW4tUGF0aCAkZGVzayAnQ2xhdWRlLmxuaycKICAgICRhdW1pZCA9ICRwa2cuUGFja2FnZUZhbWlseU5hbWUgKyAnIUNsYXVkZScKICAgICRleGUgPSBKb2luLVBhdGggJHBrZy5JbnN0YWxsTG9jYXRpb24gJ2FwcFxDbGF1ZGUuZXhlJwogICAgdHJ5IHsKICAgICAgICAkd3MgPSBOZXctT2JqZWN0IC1Db21PYmplY3QgV1NjcmlwdC5TaGVsbAogICAgICAgICRzID0gJHdzLkNyZWF0ZVNob3J0Y3V0KCRsbmspCiAgICAgICAgJHMuVGFyZ2V0UGF0aCA9ICIkZW52OndpbmRpclxleHBsb3Jlci5leGUiCiAgICAgICAgJHMuQXJndW1lbnRzID0gJ3NoZWxsOkFwcHNGb2xkZXJcJyArICRhdW1pZAogICAgICAgICRzLldvcmtpbmdEaXJlY3RvcnkgPSAkZGVzawogICAgICAgICRzLkRlc2NyaXB0aW9uID0gJ0NsYXVkZSBEZXNrdG9wJwogICAgICAgIGlmIChUZXN0LVBhdGggJGV4ZSkgeyAkcy5JY29uTG9jYXRpb24gPSAiJGV4ZSwwIiB9CiAgICAgICAgJHMuU2F2ZSgpCiAgICAgICAgcmV0dXJuICR0cnVlCiAgICB9IGNhdGNoIHsKICAgICAgICB0cnkgewogICAgICAgICAgICAkc2hlbGwgPSBOZXctT2JqZWN0IC1Db21PYmplY3QgU2hlbGwuQXBwbGljYXRpb24KICAgICAgICAgICAgJGFwcHMgPSAkc2hlbGwuTmFtZXNwYWNlKCdzaGVsbDpBcHBzRm9sZGVyJykKICAgICAgICAgICAgJGl0ZW0gPSAkYXBwcy5JdGVtcygpIHwgV2hlcmUtT2JqZWN0IHsgJF8uTmFtZSAtbWF0Y2ggJ0NsYXVkZScgfSB8IFNlbGVjdC1PYmplY3QgLUZpcnN0IDEKICAgICAgICAgICAgaWYgKCRpdGVtKSB7CiAgICAgICAgICAgICAgICAkc2hlbGwuTmFtZXNwYWNlKCRkZXNrKS5Db3B5SGVyZSgkaXRlbSwgMHgxNCkKICAgICAgICAgICAgICAgIHJldHVybiAkdHJ1ZQogICAgICAgICAgICB9CiAgICAgICAgfSBjYXRjaCB7fQogICAgICAgIFdhcm4gJ+WIm+W7uiBDbGF1ZGUg5qGM6Z2i5Zu+5qCH5aSx6LSl77yb6K+35LuO5byA5aeL6I+c5Y2V5omT5byAIENsYXVkZScKICAgICAgICByZXR1cm4gJGZhbHNlCiAgICB9Cn0KCmZ1bmN0aW9uIE5ldy1NYWdwaWVTaG9ydGN1dCgkZXhlLCAkd29ya2RpcikgewogICAgJGRlc2sgPSBbRW52aXJvbm1lbnRdOjpHZXRGb2xkZXJQYXRoKCdEZXNrdG9wJykKICAgICRsbmsgPSBKb2luLVBhdGggJGRlc2sgJ01hZ3BpZS5sbmsnCiAgICB0cnkgewogICAgICAgICR3cyA9IE5ldy1PYmplY3QgLUNvbU9iamVjdCBXU2NyaXB0LlNoZWxsCiAgICAgICAgJHMgPSAkd3MuQ3JlYXRlU2hvcnRjdXQoJGxuaykKICAgICAgICAkcy5UYXJnZXRQYXRoID0gJGV4ZQogICAgICAgICRzLldvcmtpbmdEaXJlY3RvcnkgPSAkd29ya2RpcgogICAgICAgICRzLkljb25Mb2NhdGlvbiA9ICIkZXhlLDAiCiAgICAgICAgJHMuU2F2ZSgpCiAgICAgICAgcmV0dXJuICR0cnVlCiAgICB9IGNhdGNoIHsKICAgICAgICAjIOWmguaenOezu+e7n+etlueVpeemgeatouWIm+W7uiAubG5r77yM5bCx5Zyo5qGM6Z2i5pS+5LiA5Liq5ZCM5Y2356Gs6ZO+5o6l77yM5LuN5pyJ5Y6f5Zu+5qCHCiAgICAgICAgdHJ5IHsKICAgICAgICAgICAgJHRhcmdldCA9IEpvaW4tUGF0aCAkZGVzayAnTWFncGllLmV4ZScKICAgICAgICAgICAgaWYgKC1ub3QgKFRlc3QtUGF0aCAtTGl0ZXJhbFBhdGggJHRhcmdldCkpIHsKICAgICAgICAgICAgICAgIE5ldy1JdGVtIC1JdGVtVHlwZSBIYXJkTGluayAtUGF0aCAkdGFyZ2V0IC1UYXJnZXQgJGV4ZSAtRXJyb3JBY3Rpb24gU3RvcCB8IE91dC1OdWxsCiAgICAgICAgICAgIH0KICAgICAgICAgICAgcmV0dXJuICR0cnVlCiAgICAgICAgfSBjYXRjaCB7CiAgICAgICAgICAgIHRyeSB7CiAgICAgICAgICAgICAgICAkY21kID0gSm9pbi1QYXRoICRkZXNrICdNYWdwaWUuY21kJwogICAgICAgICAgICAgICAgU2V0LUNvbnRlbnQgLVBhdGggJGNtZCAtVmFsdWUgKCdAZWNobyBvZmYnICsgImByYG4iICsgJ3N0YXJ0ICIiICInICsgJGV4ZSArICciJykgLUVuY29kaW5nIEFTQ0lJCiAgICAgICAgICAgICAgICByZXR1cm4gJHRydWUKICAgICAgICAgICAgfSBjYXRjaCB7CiAgICAgICAgICAgICAgICBXYXJuICfliJvlu7ogTWFncGllIOahjOmdouWbvuagh+Wksei0pScKICAgICAgICAgICAgICAgIHJldHVybiAkZmFsc2UKICAgICAgICAgICAgfQogICAgICAgIH0KICAgIH0KfQoKV3JpdGUtSG9zdCAnJwpXcml0ZS1Ib3N0ICc9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0nIC1Gb3JlZ3JvdW5kQ29sb3IgV2hpdGUKJHZlckxpbmUgPSAnICAgQ2xhdWRlIOe9keWFsyDCtyDkuIDplK7pg6jnvbIgIHYnICsgJFZlcnNpb24KaWYgKCRWZXJzaW9uRGF0ZSkgeyAkdmVyTGluZSArPSAnICAoJyArICRWZXJzaW9uRGF0ZSArICcpJyB9CldyaXRlLUhvc3QgJHZlckxpbmUgLUZvcmVncm91bmRDb2xvciBXaGl0ZQpXcml0ZS1Ib3N0ICc9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0nIC1Gb3JlZ3JvdW5kQ29sb3IgV2hpdGUKV3JpdGUtSG9zdCAiICAg5a6J6KOF5L2N572u77yaJERlc3QiIC1Gb3JlZ3JvdW5kQ29sb3IgRGFya0dyYXkKCiMgLS0tLS0tLS0tLSAxLiDmo4Dmn6Xmlofku7bmmK/lkKbpvZDlhaggLS0tLS0tLS0tLQpTdGVwICcxLzcnICfmo4Dmn6Xlronoo4Xmlofku7YnCiRuZWVkID0gQCgKICAgICdwYXlsb2FkXGdhdGV3YXlcbm9kZS5leGUnLAogICAgJ3BheWxvYWRcZ2F0ZXdheVxnYXRld2F5LmpzJywKICAgICdwYXlsb2FkXGdhdGV3YXlcb3BlbmFpLWJyaWRnZS5qcycsCiAgICAncGF5bG9hZFxnYXRld2F5XHJlc3RvcmUuanMnLAogICAgJ3BheWxvYWRcZ2F0ZXdheVxib290c3RyYXAuanMnLAogICAgJ3BheWxvYWRcZ2F0ZXdheVxwYW5lbC5odG1sJywKICAgICdwYXlsb2FkXGdhdGV3YXlcdmVyc2lvbi5qc29uJywKICAgICdwYXlsb2FkXGdhdGV3YXlcdHJheS5wczEnLAogICAgJ3BheWxvYWRcZ2F0ZXdheVxtb2RlbHMuanNvbicsCiAgICAncGF5bG9hZFxnYXRld2F5XHVwc3RyZWFtcy5qc29uJywKICAgICdwYXlsb2FkXG1hZ3BpZVxtYWdwaWUuZXhlJwopCiRtaXNzaW5nID0gQCgkbmVlZCB8IFdoZXJlLU9iamVjdCB7IC1ub3QgKFRlc3QtUGF0aCAoSm9pbi1QYXRoICRSb290ICRfKSkgfSkKaWYgKCRtaXNzaW5nLkNvdW50IC1ndCAwKSB7CiAgICBmb3JlYWNoICgkbSBpbiAkbWlzc2luZykgeyBGYWlsICLnvLrlsJEgJG0iIH0KICAgIFJlYWQtSG9zdCAn5paH5Lu25LiN5YWo77yM5oyJ5Zue6L2m5YWz6ZetJwogICAgZXhpdCAxCn0KT2sgJ+aWh+S7tum9kOWFqCcKCiMgLS0tLS0tLS0tLSAyLiDmo4Dmn6UgQ2xhdWRlIERlc2t0b3AgLS0tLS0tLS0tLQpTdGVwICcyLzcnICfmo4Dmn6UgQ2xhdWRlIERlc2t0b3AnCiRwa2cgPSBHZXQtQXBweFBhY2thZ2UgLU5hbWUgJypDbGF1ZGUqJyAtRXJyb3JBY3Rpb24gU2lsZW50bHlDb250aW51ZSB8CiAgICAgICBXaGVyZS1PYmplY3QgeyAkXy5QYWNrYWdlRmFtaWx5TmFtZSAtbGlrZSAnKnB6czhzeHJqeGZqamMqJyB9IHwKICAgICAgIFNlbGVjdC1PYmplY3QgLUZpcnN0IDEKaWYgKCRwa2cpIHsKICAgIE9rICgi5bey5a6J6KOFICIgKyAkcGtnLk5hbWUgKyAiICIgKyAkcGtnLlZlcnNpb24pCiAgICBOZXctQ2xhdWRlU2hvcnRjdXQgJHBrZyB8IE91dC1OdWxsCn0gZWxzZSB7CiAgICBXYXJuICfmnKrmo4DmtYvliLAgQ2xhdWRlIERlc2t0b3DjgILnvZHlhbPkvJrnu6fnu63lronoo4XvvJvor7fljZXni6zov5DooYzjgIzlronoo4VDbGF1ZGXmoYzpnaLniYgt5Y+z6ZSu5Lul566h55CG5ZGY6L+Q6KGMLmNtZOOAjScKfQojIOaXpyBTcXVpcnJlbCDniYjkvJrlnKjlm73lhoXljaHlnLDljLrpmZDliLbvvIzmj5DphpLmuIXnkIYKJG9sZCA9IEpvaW4tUGF0aCAkZW52OkxPQ0FMQVBQREFUQSAnQW50aHJvcGljQ2xhdWRlXGNsYXVkZS5leGUnCmlmIChUZXN0LVBhdGggJG9sZCkgewogICAgV2FybiAi5qOA5rWL5Yiw5pen54mIIFNxdWlycmVsIENsYXVkZe+8iCRvbGTvvInvvIzlu7rorq7lhYjljbjovb3vvIzpgb/lhY3or6/lkK/liqjlkI7ljaHlnLDljLrpmZDliLYiCn0KCiMgLS0tLS0tLS0tLSAzLiDlpI3liLbnqIvluo8gLS0tLS0tLS0tLQpTdGVwICczLzcnICflpI3liLbnvZHlhbPkuI4gTWFncGllJwpOZXctSXRlbSAtSXRlbVR5cGUgRGlyZWN0b3J5IC1Gb3JjZSAtUGF0aCAkR3dEaXIsICRNcERpciB8IE91dC1OdWxsCgojIOi/meS4pOS4quaYr+OAjOeUqOaIt+aVsOaNruOAje+8jOmHjeijheaXtuS/neeVme+8jOWIq+imhueblgoka2VlcCA9IEAoJ21vZGVscy5qc29uJywgJ3Vwc3RyZWFtcy5qc29uJykKJGNvcGllZCA9IDAKZm9yZWFjaCAoJGYgaW4gR2V0LUNoaWxkSXRlbSAoSm9pbi1QYXRoICRQYXlsb2FkICdnYXRld2F5JykgLUZpbGUpIHsKICAgICR0ID0gSm9pbi1QYXRoICRHd0RpciAkZi5OYW1lCiAgICBpZiAoKCRrZWVwIC1jb250YWlucyAkZi5OYW1lKSAtYW5kIChUZXN0LVBhdGggJHQpKSB7IFdhcm4gKCRmLk5hbWUgKyAnIOW3suWtmOWcqO+8jOS/neeVmeeOsOacieWGheWuuScpOyBjb250aW51ZSB9CiAgICBDb3B5LUl0ZW0gJGYuRnVsbE5hbWUgJHQgLUZvcmNlCiAgICAkY29waWVkKysKfQpmb3JlYWNoICgkZiBpbiBHZXQtQ2hpbGRJdGVtIChKb2luLVBhdGggJFBheWxvYWQgJ21hZ3BpZScpIC1GaWxlKSB7CiAgICBDb3B5LUl0ZW0gJGYuRnVsbE5hbWUgKEpvaW4tUGF0aCAkTXBEaXIgJGYuTmFtZSkgLUZvcmNlCiAgICAkY29waWVkKysKfQpPayAoIuWkjeWItiAkY29waWVkIOS4quaWh+S7tiDihpIgIiArICREZXN0KQoKIyAtLS0tLS0tLS0tIDQuIOeUn+aIkOWvhumSpSAtLS0tLS0tLS0tClN0ZXAgJzQvNycgJ+eUn+aIkOWvhumSpeW5tuWGmeWFpSBDbGF1ZGUg55qEIDNwIOmFjee9ricKJGtleUZpbGUgPSBKb2luLVBhdGggJEd3RGlyICdndy1rZXkudHh0JwppZiAoVGVzdC1QYXRoICRrZXlGaWxlKSB7CiAgICBPayAnZ3cta2V5LnR4dCDlt7LlrZjlnKjvvIzmsr/nlKjvvIjkuI3mjaLkuobvvIzmjaLkuoYgQ2xhdWRlIOmCo+i+ueimgemHjeWGme+8iScKfSBlbHNlIHsKICAgICRrID0gJ3NrLWd3LScgKyAoW2d1aWRdOjpOZXdHdWlkKCkuVG9TdHJpbmcoJ04nKSkKICAgIFNldC1Db250ZW50IC1QYXRoICRrZXlGaWxlIC1WYWx1ZSAkayAtRW5jb2RpbmcgQVNDSUkgLU5vTmV3bGluZQogICAgT2sgJ+W3sueUn+aIkOmaj+acuuWvhumSpSBndy1rZXkudHh0Jwp9CgojIOWFs+mUruS4gOatpe+8mkNsYXVkZSDlj6rorqQgM3Ag5qih5byP77yM6ICM6L+Z5Liq5qih5byP55qE5Lik5Liq5paH5Lu25a6D6Ieq5bex5Y+q5ZyoIueZu+W9leaIkOWKn+S5i+WQjiLmiY3nlJ/miJDjgIIKIyDlhajmlrDmnLrlmajkuIrlroPkvJrlnKjnmbvlvZXpobXooqvlnLDljLrpmZDliLbljaHmrbvvvIzmsLjov5zkuI3kvJrnlJ/miJAgLT4g5omA5Lul6L+Z6YeM55u05o6l5YaZ5Ye65p2l44CCCiRib290ID0gSm9pbi1QYXRoICRHd0RpciAnYm9vdHN0cmFwLmpzJwokbm9kZUV4ZSA9IEpvaW4tUGF0aCAkR3dEaXIgJ25vZGUuZXhlJwppZiAoKFRlc3QtUGF0aCAkYm9vdCkgLWFuZCAoVGVzdC1QYXRoICRub2RlRXhlKSkgewogICAgdHJ5IHsKICAgICAgICAkbnVsbCA9ICYgJG5vZGVFeGUgJGJvb3QgLS1xdWlldAogICAgICAgICRjbGF1ZGVDZmcgPSBKb2luLVBhdGggJGVudjpMT0NBTEFQUERBVEEgJ0NsYXVkZS0zcFxjbGF1ZGVfZGVza3RvcF9jb25maWcuanNvbicKICAgICAgICAkbGliRGlyID0gSm9pbi1QYXRoICRlbnY6TE9DQUxBUFBEQVRBICdDbGF1ZGUtM3BcY29uZmlnTGlicmFyeScKICAgICAgICBpZiAoKFRlc3QtUGF0aCAkY2xhdWRlQ2ZnKSAtYW5kIChUZXN0LVBhdGggJGxpYkRpcikpIHsKICAgICAgICAgICAgT2sgJ+W3suWGmeWFpSAzcCDmqKHlvI/phY3nva7vvIhDbGF1ZGUg5LiN5Lya5YaN5Y2h55m75b2V6aG1IC8g5Zyw5Yy66ZmQ5Yi277yJJwogICAgICAgIH0gZWxzZSB7CiAgICAgICAgICAgIFdhcm4gJ2Jvb3RzdHJhcC5qcyDot5HkuobvvIzkvYbmsqHnnIvliLDphY3nva7mlofku7bvvIznqI3lkI7lnKjpnaLmnb/ngrnjgIzoh6rlu7rphY3nva7moaPjgI0nCiAgICAgICAgfQogICAgfSBjYXRjaCB7CiAgICAgICAgV2FybiAoJ+WGmeWFpSAzcCDphY3nva7lpLHotKXvvJonICsgJF8uRXhjZXB0aW9uLk1lc3NhZ2UpCiAgICB9Cn0gZWxzZSB7CiAgICBXYXJuICfnvLrlsJEgYm9vdHN0cmFwLmpz77yM6Lez6L+HIDNwIOmFjee9ru+8iOeojeWQjuWcqOmdouadv+eCueOAjOiHquW7uumFjee9ruaho+OAje+8iScKfQoKJG1vZGVscyA9IEdldC1Db250ZW50IChKb2luLVBhdGggJEd3RGlyICdtb2RlbHMuanNvbicpIC1SYXcgfCBDb252ZXJ0RnJvbS1Kc29uCiRtb2RlbENvdW50ID0gQCgkbW9kZWxzKS5Db3VudAppZiAoJG51bGwgLWVxICRtb2RlbHMpIHsgJG1vZGVsQ291bnQgPSAwIH0KT2sgKCLlvZPliY3mqKHlnovooajvvJoiICsgJG1vZGVsQ291bnQgKyAiIOS4qu+8iOepuuaYr+ato+W4uOeahO+8jOijheWujOiHquW3seWOu+WKoO+8iSIpCgojIC0tLS0tLS0tLS0gNS4g5byA5py66Ieq5ZCvIC0tLS0tLS0tLS0KU3RlcCAnNS83JyAn6K6+572u5byA5py66Ieq5ZCvJwokc3RhcnR1cCA9IFtFbnZpcm9ubWVudF06OkdldEZvbGRlclBhdGgoJ1N0YXJ0dXAnKQokYXV0b1ZicyA9IEpvaW4tUGF0aCAkc3RhcnR1cCAnQ2xhdWRlIEdhdGV3YXkgVHJheS52YnMnCiR2YnNCb2R5ID0gQCIKU2V0IHNoID0gQ3JlYXRlT2JqZWN0KCJXU2NyaXB0LlNoZWxsIikKc2guUnVuICIkR3dEaXJcdHJheS1sYXVuY2gudmJzIiwgMCwgRmFsc2UKIkAKU2V0LUNvbnRlbnQgLVBhdGggJGF1dG9WYnMgLVZhbHVlICR2YnNCb2R5IC1FbmNvZGluZyBEZWZhdWx0Ck9rICgn5bey5YaZ5YWlICcgKyAkYXV0b1ZicykKCiMgLS0tLS0tLS0tLSA2LiDmoYzpnaLlm77moIcgLS0tLS0tLS0tLQpTdGVwICc2LzcnICfliJvlu7rmoYzpnaLlm77moIcnCiRkZXNrID0gW0Vudmlyb25tZW50XTo6R2V0Rm9sZGVyUGF0aCgnRGVza3RvcCcpCiR1cmxQYXRoID0gSm9pbi1QYXRoICRkZXNrICdDbGF1ZGUg572R5YWzLnVybCcKJHRhcmdldCA9IChKb2luLVBhdGggJEd3RGlyICdvcGVuLXBhbmVsLnZicycpIC1yZXBsYWNlICdcXCcsICcvJwokdXJsQm9keSA9IEAiCltJbnRlcm5ldFNob3J0Y3V0XQpVUkw9ZmlsZTovLy8kdGFyZ2V0Ckljb25GaWxlPSRHd0RpclxnYXRld2F5LmljbwpJY29uSW5kZXg9MAoiQApTZXQtQ29udGVudCAtUGF0aCAkdXJsUGF0aCAtVmFsdWUgJHVybEJvZHkgLUVuY29kaW5nIFVuaWNvZGUKT2sgKCflt7LliJvlu7ogJyArICR1cmxQYXRoKQoKIyBNYWdwaWUg5qGM6Z2i5Zu+5qCHCiRtcEV4ZSA9IEpvaW4tUGF0aCAkTXBEaXIgJ21hZ3BpZS5leGUnCmlmIChUZXN0LVBhdGggJG1wRXhlKSB7CiAgICBpZiAoTmV3LU1hZ3BpZVNob3J0Y3V0ICRtcEV4ZSAkTXBEaXIpIHsKICAgICAgICBPayAn5bey5Yib5bu6IE1hZ3BpZSDmoYzpnaLlm77moIcnCiAgICB9Cn0gZWxzZSB7CiAgICBXYXJuICfmib7kuI3liLAgbWFncGllLmV4Ze+8jOi3s+i/hyBNYWdwaWUg5Zu+5qCHJwp9CgojIENsYXVkZSDmoYzpnaLlm77moIfvvIjlpoLmnpzlt7Lnu4/lronoo4XvvIkKaWYgKCRwa2cpIHsKICAgIGlmIChOZXctQ2xhdWRlU2hvcnRjdXQgJHBrZykgeyBPayAn5bey5Yib5bu6IENsYXVkZSDmoYzpnaLlm77moIcnIH0KfSBlbHNlIHsKICAgIFdhcm4gJ0NsYXVkZSDlsJrmnKrlronoo4XvvIzlronoo4UgQ2xhdWRlIOWQjuS8muiHquWKqOWIm+W7uuahjOmdouWbvuaghycKfQoKIyAtLS0tLS0tLS0tIDcuIOWQr+WKqCAtLS0tLS0tLS0tClN0ZXAgJzcvNycgJ+WQr+WKqOe9keWFsycKJGJ1c3kgPSBHZXQtTmV0VENQQ29ubmVjdGlvbiAtTG9jYWxQb3J0ICRQb3J0IC1TdGF0ZSBMaXN0ZW4gLUVycm9yQWN0aW9uIFNpbGVudGx5Q29udGludWUKaWYgKCRidXN5KSB7CiAgICBXYXJuICLnq6/lj6MgJFBvcnQg5bey6KKr5Y2g55So77yM5Y+v6IO95bey57uP5Zyo6LeR77yb5YWI6K+V552A6L+e5LiA5LiLIgp9IGVsc2UgewogICAgU3RhcnQtUHJvY2VzcyAtRmlsZVBhdGggJ3dzY3JpcHQuZXhlJyAtQXJndW1lbnRMaXN0ICJgIiRHd0Rpclx0cmF5LWxhdW5jaC52YnNgIiIKICAgICR1cCA9ICRmYWxzZQogICAgZm9yICgkaSA9IDA7ICRpIC1sdCAzMDsgJGkrKykgewogICAgICAgIFN0YXJ0LVNsZWVwIC1NaWxsaXNlY29uZHMgNDAwCiAgICAgICAgdHJ5IHsKICAgICAgICAgICAgJHIgPSBJbnZva2UtV2ViUmVxdWVzdCAtVXJpICJodHRwOi8vMTI3LjAuMC4xOiRQb3J0L2hlYWx0aCIgLVVzZUJhc2ljUGFyc2luZyAtVGltZW91dFNlYyAyCiAgICAgICAgICAgIGlmICgkci5TdGF0dXNDb2RlIC1lcSAyMDApIHsgJHVwID0gJHRydWU7IGJyZWFrIH0KICAgICAgICB9IGNhdGNoIHt9CiAgICB9CiAgICBpZiAoJHVwKSB7IE9rICLnvZHlhbPlt7LlkK/liqjvvIgkUG9ydO+8iSIgfSBlbHNlIHsgRmFpbCAn572R5YWz5rKh6LW35p2l77yM55yLIGdhdGV3YXkubG9nJyB9Cn0KCldyaXRlLUhvc3QgJycKV3JpdGUtSG9zdCAnPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09JyAtRm9yZWdyb3VuZENvbG9yIFdoaXRlCldyaXRlLUhvc3QgKCcgICDlronoo4XlrozmiJAgIHYnICsgJFZlcnNpb24pIC1Gb3JlZ3JvdW5kQ29sb3IgR3JlZW4KV3JpdGUtSG9zdCAnPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09JyAtRm9yZWdyb3VuZENvbG9yIFdoaXRlCldyaXRlLUhvc3QgJycKV3JpdGUtSG9zdCAn5o6l5LiL5p2l77yI56ys5LiA5qyh5b+F6aG75YGa77yJ77yaJyAtRm9yZWdyb3VuZENvbG9yIFllbGxvdwppZiAoLW5vdCAkcGtnKSB7CiAgICBXcml0ZS1Ib3N0ICcgIDAuIOWPs+mUruOAjOWuieijhUNsYXVkZeahjOmdoueJiC3lj7PplK7ku6XnrqHnkIblkZjov5DooYwuY21k44CN5a6J6KOFIENsYXVkZe+8iOS8muWGmeWFpSAzcCDphY3nva7vvIzpgb/lhY3lnLDljLrpmZDliLbvvIknCiAgICBXcml0ZS1Ib3N0ICcgICAgIOWuieijheWujOaIkOWQju+8jOahjOmdouS8muWHuueOsCBDbGF1ZGUg5Zu+5qCH77yb5YaN57un57ut5LiL6Z2i55qE5q2l6aqkJwp9CldyaXRlLUhvc3QgJyAgMS4g5ZCv5YqoIE1hZ3BpZe+8iCcgKyAkTXBEaXIgKyAnXG1hZ3BpZS5leGXvvInvvIznmbvlvZXkvaDnmoQgV29ya0J1ZGR5IOi0puWPtycKV3JpdGUtSG9zdCAnICAyLiDmoYzpnaLlj4zlh7vjgIxDbGF1ZGUg572R5YWz44CN5omT5byA6Z2i5p2/IOKGkiDkuIrmuLjpobUg4oaSIG1hZ3BpZSDpgqPooYzngrnjgIzoh6rliqjloavlhYXjgI0nCldyaXRlLUhvc3QgJyAgMy4g5Yu+6YCJ6KaB55So55qE5qih5Z6LIOKGkiDjgIzliqDov5vmqKHlnovooajjgI3ihpIg5qih5Z6L6aG154K544CM5L+d5a2Y5bm25bqU55So44CNJwpXcml0ZS1Ib3N0ICcgIDQuIOaooeWei+mhteeCueOAjOmHjeWQry/miZPlvIAgQ2xhdWRl44CN77yM5LiL5ouJ5qGG6YeM5bCx5pyJ5qih5Z6L5LqGJwpXcml0ZS1Ib3N0ICcnCldyaXRlLUhvc3QgJyAg5oOz5o6l5Yir5a6277yIRGVlcFNlZWsgLyBBZ25lcyAvIOS7u+aEj+S4rei9rO+8ie+8muS4iua4uOmhteOAjOa3u+WKoOOAje+8jOWhqyBCYXNlIFVSTCDlkowgS2V5JwpXcml0ZS1Ib3N0ICcgIOS/neWtmOWQjueCueOAjOiHquWKqOWhq+WFheOAje+8jOaooeWei+WQjeWSjOaYvuekuuWQjeWug+S8muiHquW3seWhq+WlvScgLUZvcmVncm91bmRDb2xvciBEYXJrR3JheQpXcml0ZS1Ib3N0ICcnCgojIOmhuuaJi+aKiumdouadv+aJk+W8gApTdGFydC1Qcm9jZXNzIC1GaWxlUGF0aCAnd3NjcmlwdC5leGUnIC1Bcmd1bWVudExpc3QgImAiJEd3RGlyXG9wZW4tcGFuZWwudmJzYCIiCgpSZWFkLUhvc3QgJ+aMieWbnui9puWFs+mXrei/meS4queql+WPoycK
+﻿# Claude 网关 · 一键部署（网关 + Magpie；Claude Desktop 单独安装）
+# 做什么：复制网关与 Magpie → 生成密钥与空配置 → 建自启和桌面图标 → 启动
+# 特点：不带任何原有配置。模型表为空，上游只留内置的 Magpie，其余由你装完后自己加。
+
+$ErrorActionPreference = 'Stop'
+
+# ---------- 0. 管理员权限 ----------
+$isAdmin = ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
+if (-not $isAdmin) {
+    Write-Host ''
+    Write-Host '  需要管理员权限（安装网关/桌面图标/自启用），正在申请…' -ForegroundColor Yellow
+    try {
+        Start-Process powershell -Verb RunAs -ArgumentList @('-NoProfile', '-ExecutionPolicy', 'Bypass', '-File', "`"$PSCommandPath`"")
+    } catch {
+        Write-Host '  提权被拒绝，安装中止。' -ForegroundColor Red
+        Read-Host '按回车关闭'
+    }
+    exit
+}
+
+$Root    = $PSScriptRoot
+$Payload = Join-Path $Root 'payload'
+$Version = 'unknown'
+$VersionDate = ''
+try {
+    $vi = Get-Content (Join-Path $Payload 'gateway\version.json') -Raw -Encoding UTF8 -ErrorAction Stop | ConvertFrom-Json
+    if ($vi.version) { $Version = [string]$vi.version }
+    if ($vi.date) { $VersionDate = [string]$vi.date }
+} catch {}
+$Dest    = Join-Path $env:LOCALAPPDATA 'ClaudeGateway'
+$GwDir   = Join-Path $Dest 'gateway'
+$MpDir   = Join-Path $Dest 'magpie'
+$Port    = 15722
+
+function Step($n, $t) { Write-Host "`n[$n] $t" -ForegroundColor Cyan }
+function Ok($m)   { Write-Host "     OK   $m" -ForegroundColor Green }
+function Warn($m) { Write-Host "     !    $m" -ForegroundColor Yellow }
+function Fail($m) { Write-Host "     X    $m" -ForegroundColor Red }
+
+function New-ClaudeShortcut($pkg) {
+    $desk = [Environment]::GetFolderPath('Desktop')
+    $lnk = Join-Path $desk 'Claude.lnk'
+    $aumid = $pkg.PackageFamilyName + '!Claude'
+    $exe = Join-Path $pkg.InstallLocation 'app\Claude.exe'
+    try {
+        $ws = New-Object -ComObject WScript.Shell
+        $s = $ws.CreateShortcut($lnk)
+        $s.TargetPath = "$env:windir\explorer.exe"
+        $s.Arguments = 'shell:AppsFolder\' + $aumid
+        $s.WorkingDirectory = $desk
+        $s.Description = 'Claude Desktop'
+        if (Test-Path $exe) { $s.IconLocation = "$exe,0" }
+        $s.Save()
+        return $true
+    } catch {
+        try {
+            $shell = New-Object -ComObject Shell.Application
+            $apps = $shell.Namespace('shell:AppsFolder')
+            $item = $apps.Items() | Where-Object { $_.Name -match 'Claude' } | Select-Object -First 1
+            if ($item) {
+                $shell.Namespace($desk).CopyHere($item, 0x14)
+                return $true
+            }
+        } catch {}
+        Warn '创建 Claude 桌面图标失败；请从开始菜单打开 Claude'
+        return $false
+    }
+}
+
+function New-MagpieShortcut($exe, $workdir) {
+    $desk = [Environment]::GetFolderPath('Desktop')
+    $lnk = Join-Path $desk 'Magpie.lnk'
+    try {
+        $ws = New-Object -ComObject WScript.Shell
+        $s = $ws.CreateShortcut($lnk)
+        $s.TargetPath = $exe
+        $s.WorkingDirectory = $workdir
+        $s.IconLocation = "$exe,0"
+        $s.Save()
+        return $true
+    } catch {
+        # 如果系统策略禁止创建 .lnk，就在桌面放一个同卷硬链接，仍有原图标
+        try {
+            $target = Join-Path $desk 'Magpie.exe'
+            if (-not (Test-Path -LiteralPath $target)) {
+                New-Item -ItemType HardLink -Path $target -Target $exe -ErrorAction Stop | Out-Null
+            }
+            return $true
+        } catch {
+            try {
+                $cmd = Join-Path $desk 'Magpie.cmd'
+                Set-Content -Path $cmd -Value ('@echo off' + "`r`n" + 'start "" "' + $exe + '"') -Encoding ASCII
+                return $true
+            } catch {
+                Warn '创建 Magpie 桌面图标失败'
+                return $false
+            }
+        }
+    }
+}
+
+Write-Host ''
+Write-Host '================================================' -ForegroundColor White
+$verLine = '   Claude 网关 · 一键部署  v' + $Version
+if ($VersionDate) { $verLine += '  (' + $VersionDate + ')' }
+Write-Host $verLine -ForegroundColor White
+Write-Host '================================================' -ForegroundColor White
+Write-Host "   安装位置：$Dest" -ForegroundColor DarkGray
+
+# ---------- 1. 检查文件是否齐全 ----------
+Step '1/7' '检查安装文件'
+$need = @(
+    'payload\gateway\node.exe',
+    'payload\gateway\gateway.js',
+    'payload\gateway\openai-bridge.js',
+    'payload\gateway\restore.js',
+    'payload\gateway\bootstrap.js',
+    'payload\gateway\panel.html',
+    'payload\gateway\version.json',
+    'payload\gateway\tray.ps1',
+    'payload\gateway\models.json',
+    'payload\gateway\upstreams.json',
+    'payload\magpie\magpie.exe'
+)
+$missing = @($need | Where-Object { -not (Test-Path (Join-Path $Root $_)) })
+if ($missing.Count -gt 0) {
+    foreach ($m in $missing) { Fail "缺少 $m" }
+    Read-Host '文件不全，按回车关闭'
+    exit 1
+}
+Ok '文件齐全'
+
+# ---------- 2. 检查 Claude Desktop ----------
+Step '2/7' '检查 Claude Desktop'
+$pkg = Get-AppxPackage -Name '*Claude*' -ErrorAction SilentlyContinue |
+       Where-Object { $_.PackageFamilyName -like '*pzs8sxrjxfjjc*' } |
+       Select-Object -First 1
+if ($pkg) {
+    Ok ("已安装 " + $pkg.Name + " " + $pkg.Version)
+    New-ClaudeShortcut $pkg | Out-Null
+} else {
+    Warn '未检测到 Claude Desktop。网关会继续安装；请单独运行「安装Claude桌面版-右键以管理员运行.cmd」'
+}
+# 旧 Squirrel 版会在国内卡地区限制，提醒清理
+$old = Join-Path $env:LOCALAPPDATA 'AnthropicClaude\claude.exe'
+if (Test-Path $old) {
+    Warn "检测到旧版 Squirrel Claude（$old），建议先卸载，避免误启动后卡地区限制"
+}
+
+# ---------- 3. 复制程序 ----------
+Step '3/7' '复制网关与 Magpie'
+New-Item -ItemType Directory -Force -Path $GwDir, $MpDir | Out-Null
+
+# 这两个是「用户数据」，重装时保留，别覆盖
+$keep = @('models.json', 'upstreams.json')
+$copied = 0
+foreach ($f in Get-ChildItem (Join-Path $Payload 'gateway') -File) {
+    $t = Join-Path $GwDir $f.Name
+    if (($keep -contains $f.Name) -and (Test-Path $t)) { Warn ($f.Name + ' 已存在，保留现有内容'); continue }
+    Copy-Item $f.FullName $t -Force
+    $copied++
+}
+foreach ($f in Get-ChildItem (Join-Path $Payload 'magpie') -File) {
+    Copy-Item $f.FullName (Join-Path $MpDir $f.Name) -Force
+    $copied++
+}
+Ok ("复制 $copied 个文件 → " + $Dest)
+
+# ---------- 4. 生成密钥 ----------
+Step '4/7' '生成密钥并写入 Claude 的 3p 配置'
+$keyFile = Join-Path $GwDir 'gw-key.txt'
+if (Test-Path $keyFile) {
+    Ok 'gw-key.txt 已存在，沿用（不换了，换了 Claude 那边要重写）'
+} else {
+    $k = 'sk-gw-' + ([guid]::NewGuid().ToString('N'))
+    Set-Content -Path $keyFile -Value $k -Encoding ASCII -NoNewline
+    Ok '已生成随机密钥 gw-key.txt'
+}
+
+# 关键一步：Claude 只认 3p 模式，而这个模式的两个文件它自己只在"登录成功之后"才生成。
+# 全新机器上它会在登录页被地区限制卡死，永远不会生成 -> 所以这里直接写出来。
+$boot = Join-Path $GwDir 'bootstrap.js'
+$nodeExe = Join-Path $GwDir 'node.exe'
+if ((Test-Path $boot) -and (Test-Path $nodeExe)) {
+    try {
+        $null = & $nodeExe $boot --quiet
+        $claudeCfg = Join-Path $env:LOCALAPPDATA 'Claude-3p\claude_desktop_config.json'
+        $libDir = Join-Path $env:LOCALAPPDATA 'Claude-3p\configLibrary'
+        if ((Test-Path $claudeCfg) -and (Test-Path $libDir)) {
+            Ok '已写入 3p 模式配置（Claude 不会再卡登录页 / 地区限制）'
+        } else {
+            Warn 'bootstrap.js 跑了，但没看到配置文件，稍后在面板点「自建配置档」'
+        }
+    } catch {
+        Warn ('写入 3p 配置失败：' + $_.Exception.Message)
+    }
+} else {
+    Warn '缺少 bootstrap.js，跳过 3p 配置（稍后在面板点「自建配置档」）'
+}
+
+$models = Get-Content (Join-Path $GwDir 'models.json') -Raw | ConvertFrom-Json
+$modelCount = @($models).Count
+if ($null -eq $models) { $modelCount = 0 }
+Ok ("当前模型表：" + $modelCount + " 个（空是正常的，装完自己去加）")
+
+# ---------- 5. 开机自启 ----------
+Step '5/7' '设置开机自启'
+$startup = [Environment]::GetFolderPath('Startup')
+$autoVbs = Join-Path $startup 'Claude Gateway Tray.vbs'
+$vbsBody = @"
+Set sh = CreateObject("WScript.Shell")
+sh.Run "$GwDir\tray-launch.vbs", 0, False
+"@
+Set-Content -Path $autoVbs -Value $vbsBody -Encoding Default
+Ok ('已写入 ' + $autoVbs)
+
+# ---------- 6. 桌面图标 ----------
+Step '6/7' '创建桌面图标'
+$desk = [Environment]::GetFolderPath('Desktop')
+$urlPath = Join-Path $desk 'Claude 网关.url'
+$target = (Join-Path $GwDir 'open-panel.vbs') -replace '\\', '/'
+$urlBody = @"
+[InternetShortcut]
+URL=file:///$target
+IconFile=$GwDir\gateway.ico
+IconIndex=0
+"@
+Set-Content -Path $urlPath -Value $urlBody -Encoding Unicode
+Ok ('已创建 ' + $urlPath)
+
+# Magpie 桌面图标
+$mpExe = Join-Path $MpDir 'magpie.exe'
+if (Test-Path $mpExe) {
+    if (New-MagpieShortcut $mpExe $MpDir) {
+        Ok '已创建 Magpie 桌面图标'
+    }
+} else {
+    Warn '找不到 magpie.exe，跳过 Magpie 图标'
+}
+
+# Claude 桌面图标（如果已经安装）
+if ($pkg) {
+    if (New-ClaudeShortcut $pkg) { Ok '已创建 Claude 桌面图标' }
+} else {
+    Warn 'Claude 尚未安装，安装 Claude 后会自动创建桌面图标'
+}
+
+# ---------- 7. 启动 ----------
+Step '7/7' '启动网关'
+$busy = Get-NetTCPConnection -LocalPort $Port -State Listen -ErrorAction SilentlyContinue
+if ($busy) {
+    Warn "端口 $Port 已被占用，可能已经在跑；先试着连一下"
+} else {
+    Start-Process -FilePath 'wscript.exe' -ArgumentList "`"$GwDir\tray-launch.vbs`""
+    $up = $false
+    for ($i = 0; $i -lt 30; $i++) {
+        Start-Sleep -Milliseconds 400
+        try {
+            $r = Invoke-WebRequest -Uri "http://127.0.0.1:$Port/health" -UseBasicParsing -TimeoutSec 2
+            if ($r.StatusCode -eq 200) { $up = $true; break }
+        } catch {}
+    }
+    if ($up) { Ok "网关已启动（$Port）" } else { Fail '网关没起来，看 gateway.log' }
+}
+
+Write-Host ''
+Write-Host '================================================' -ForegroundColor White
+Write-Host ('   安装完成  v' + $Version) -ForegroundColor Green
+Write-Host '================================================' -ForegroundColor White
+Write-Host ''
+Write-Host '接下来（第一次必须做）：' -ForegroundColor Yellow
+if (-not $pkg) {
+    Write-Host '  0. 右键「安装Claude桌面版-右键以管理员运行.cmd」安装 Claude（会写入 3p 配置，避免地区限制）'
+    Write-Host '     安装完成后，桌面会出现 Claude 图标；再继续下面的步骤'
+}
+Write-Host '  1. 启动 Magpie（' + $MpDir + '\magpie.exe），登录你的 WorkBuddy 账号'
+Write-Host '  2. 桌面双击「Claude 网关」打开面板 → 上游页 → magpie 那行点「自动填充」'
+Write-Host '  3. 勾选要用的模型 → 「加进模型表」→ 模型页点「保存并应用」'
+Write-Host '  4. 模型页点「重启/打开 Claude」，下拉框里就有模型了'
+Write-Host ''
+Write-Host '  想接别家（DeepSeek / Agnes / 任意中转）：上游页「添加」，填 Base URL 和 Key'
+Write-Host '  保存后点「自动填充」，模型名和显示名它会自己填好' -ForegroundColor DarkGray
+Write-Host ''
+
+# 顺手把面板打开
+Start-Process -FilePath 'wscript.exe' -ArgumentList "`"$GwDir\open-panel.vbs`""
+
+Read-Host '按回车关闭这个窗口'

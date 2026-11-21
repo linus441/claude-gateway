@@ -1,1 +1,10 @@
-QGVjaG8gb2ZmCnNldGxvY2FsCmNkIC9kICIlfmRwMCIKaWYgbm90IGV4aXN0ICIlfmRwMHVuaW5zdGFsbC5wczEiICgKICBlY2hvIHVuaW5zdGFsbC5wczEgbm90IGZvdW5kLiBQbGVhc2UgZXh0cmFjdCB0aGUgd2hvbGUgYXJjaGl2ZSBmaXJzdC4KICBwYXVzZQogIGV4aXQgL2IgMQopCmVjaG8gU3RhcnRpbmcgdW5pbnN0YWxsZXIuLi4KcG93ZXJzaGVsbCAtTm9Qcm9maWxlIC1FeGVjdXRpb25Qb2xpY3kgQnlwYXNzIC1GaWxlICIlfmRwMHVuaW5zdGFsbC5wczEiCg==
+@echo off
+setlocal
+cd /d "%~dp0"
+if not exist "%~dp0uninstall.ps1" (
+  echo uninstall.ps1 not found. Please extract the whole archive first.
+  pause
+  exit /b 1
+)
+echo Starting uninstaller...
+powershell -NoProfile -ExecutionPolicy Bypass -File "%~dp0uninstall.ps1"

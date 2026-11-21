@@ -1,1 +1,29 @@
-ewogICJ2ZXJzaW9uIjogMiwKICAidXBzdHJlYW1zIjogWwogICAgewogICAgICAiaWQiOiAibWFncGllIiwKICAgICAgImxhYmVsIjogIk1hZ3BpZSIsCiAgICAgICJiYXNlVXJsIjogImh0dHA6Ly8xMjcuMC4wLjE6MzQyNSIsCiAgICAgICJhcGlLZXkiOiAibWFncGllIiwKICAgICAgIm1vZGVsc1BhdGgiOiAiL3YxL21vZGVscyIsCiAgICAgICJidWlsdGluIjogdHJ1ZQogICAgfSwKICAgIHsKICAgICAgImlkIjogImRlZXBzZWVrIiwKICAgICAgImxhYmVsIjogIkRlZXBTZWVrIOWumOaWuSIsCiAgICAgICJiYXNlVXJsIjogImh0dHBzOi8vYXBpLmRlZXBzZWVrLmNvbS9hbnRocm9waWMiLAogICAgICAiYXBpS2V5IjogInNrLeWcqOi/memHjOWhq+S9oOiHquW3seeahGtleSIsCiAgICAgICJtb2RlbHNQYXRoIjogIi9tb2RlbHMiLAogICAgICAiYnVpbHRpbiI6IGZhbHNlCiAgICB9LAogICAgewogICAgICAiaWQiOiAicmVsYXkiLAogICAgICAibGFiZWwiOiAi5p+Q5LiqIE9wZW5BSSDlhbzlrrnkuK3ovawiLAogICAgICAiYmFzZVVybCI6ICJodHRwczovL2FwaS5leGFtcGxlLmNvbS92MSIsCiAgICAgICJhcGlLZXkiOiAic2st5Zyo6L+Z6YeM5aGr5L2g6Ieq5bex55qEa2V5IiwKICAgICAgIm1vZGVsc1BhdGgiOiAiL3YxL21vZGVscyIsCiAgICAgICJidWlsdGluIjogZmFsc2UKICAgIH0KICBdCn0K
+{
+  "version": 2,
+  "upstreams": [
+    {
+      "id": "magpie",
+      "label": "Magpie",
+      "baseUrl": "http://127.0.0.1:3425",
+      "apiKey": "magpie",
+      "modelsPath": "/v1/models",
+      "builtin": true
+    },
+    {
+      "id": "deepseek",
+      "label": "DeepSeek 官方",
+      "baseUrl": "https://api.deepseek.com/anthropic",
+      "apiKey": "sk-在这里填你自己的key",
+      "modelsPath": "/models",
+      "builtin": false
+    },
+    {
+      "id": "relay",
+      "label": "某个 OpenAI 兼容中转",
+      "baseUrl": "https://api.example.com/v1",
+      "apiKey": "sk-在这里填你自己的key",
+      "modelsPath": "/v1/models",
+      "builtin": false
+    }
+  ]
+}

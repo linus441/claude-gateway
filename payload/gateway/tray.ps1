@@ -1,1 +1,358 @@
-77u/IyBDbGF1ZGUg572R5YWz5omY55uY56iL5bqPCiMg5L2c55So77ya5Lul5peg56qX5Y+j5pa55byP5a6I5oqk572R5YWz77yM5Y+z5LiL6KeS5omY55uY5Zu+5qCH5o+Q5L6b5Y+z6ZSu6I+c5Y2VCiMgICDngrnpnaLmnb/nqpflj6PnmoTlj4kgPSDlj6rmmK/lhbPmjonpnaLmnb/vvIznqIvluo/ku43lnKjmiZjnm5jov5DooYwKIyAgIOaJmOebmOiPnOWNleOAjOmAgOWHuuOAjT0g55yf5q2j5YWz6Zet77yI5YaZIC50cmF5LW9mZiDmoIforrDlubbnu5PmnZ/nvZHlhbPvvIkKIyDlkK/liqjmlrnlvI/vvJp0cmF5LWxhdW5jaC52YnPvvIh3c2NyaXB0IOmakOiXj+eql+WPo++8ieKGkiDmnKzohJrmnKwKIyDms6jmhI/vvJrmnKzmlofku7blv4XpobvmmK8gVVRGLTgg5bimIEJPTe+8jOWQpuWImSBQb3dlclNoZWxsIDUuMSDkvJrmiorkuK3mlofor7vmiJDkubHnoIEKCiRFcnJvckFjdGlvblByZWZlcmVuY2UgPSAnU3RvcCcKCkFkZC1UeXBlIC1Bc3NlbWJseU5hbWUgU3lzdGVtLldpbmRvd3MuRm9ybXMKQWRkLVR5cGUgLUFzc2VtYmx5TmFtZSBTeXN0ZW0uRHJhd2luZwoKJFJPT1QgPSAkUFNTY3JpcHRSb290CmlmICgtbm90ICRST09UKSB7ICRST09UID0gU3BsaXQtUGF0aCAtUGFyZW50ICRNeUludm9jYXRpb24uTXlDb21tYW5kLlBhdGggfQokTk9ERSA9IEpvaW4tUGF0aCAkUk9PVCAnbm9kZS5leGUnCiRHV0pTID0gSm9pbi1QYXRoICRST09UICdnYXRld2F5LmpzJwokVExPRyA9IEpvaW4tUGF0aCAkUk9PVCAndHJheS5sb2cnCiRGTEFHID0gSm9pbi1QYXRoICRST09UICcudHJheS1vZmYnCiRQT1JUID0gMTU3MjIKCmZ1bmN0aW9uIExvZy1UcmF5KFtzdHJpbmddJG0pIHsKICB0cnkgewogICAgaWYgKChUZXN0LVBhdGggLUxpdGVyYWxQYXRoICRUTE9HKSAtYW5kICgoR2V0LUl0ZW0gLUxpdGVyYWxQYXRoICRUTE9HKS5MZW5ndGggLWd0IDEwNDg1NzYpKSB7CiAgICAgIE1vdmUtSXRlbSAtTGl0ZXJhbFBhdGggJFRMT0cgLURlc3RpbmF0aW9uICgkVExPRyArICcuMScpIC1Gb3JjZQogICAgfQogICAgIiQoR2V0LURhdGUgLUZvcm1hdCAneXl5eS1NTS1kZCBISDptbTpzcycpICAkbSIgfCBBZGQtQ29udGVudCAtTGl0ZXJhbFBhdGggJFRMT0cgLUVuY29kaW5nIFVURjgKICB9IGNhdGNoIHsgfQp9CgojIOeUqOaIt+eCuei/h+OAjOmAgOWHuuOAjeWwseS4jeimgeiHquW3seWbnuadpe+8iOiuoeWIkuS7u+WKoeavjyAyIOWIhumSn+S8muiwg+S4gOasoeacrOiEmuacrO+8iQppZiAoVGVzdC1QYXRoIC1MaXRlcmFsUGF0aCAkRkxBRykgeyBMb2ctVHJheSAnZmxhZyAudHJheS1vZmYg5a2Y5Zyo77yM5omY55uY5LiN5ZCv5YqoJzsgZXhpdCAwIH0KCiMg5Y2V5a6e5L6LCiRjcmVhdGVkID0gJGZhbHNlCiRzY3JpcHQ6TVRYID0gW1N5c3RlbS5UaHJlYWRpbmcuTXV0ZXhdOjpuZXcoJHRydWUsICdMb2NhbFxDbGF1ZGVHYXRld2F5VHJheScsIFtyZWZdJGNyZWF0ZWQpCmlmICgtbm90ICRjcmVhdGVkKSB7IGV4aXQgMCB9CgpmdW5jdGlvbiBUZXN0LVBvcnQoW2ludF0kcCkgewogICRjID0gTmV3LU9iamVjdCBTeXN0ZW0uTmV0LlNvY2tldHMuVGNwQ2xpZW50CiAgdHJ5IHsKICAgICRpYXIgPSAkYy5CZWdpbkNvbm5lY3QoJzEyNy4wLjAuMScsICRwLCAkbnVsbCwgJG51bGwpCiAgICBpZiAoJGlhci5Bc3luY1dhaXRIYW5kbGUuV2FpdE9uZSg0MDApIC1hbmQgJGMuQ29ubmVjdGVkKSB7IHJldHVybiAkdHJ1ZSB9CiAgICByZXR1cm4gJGZhbHNlCiAgfSBjYXRjaCB7IHJldHVybiAkZmFsc2UgfSBmaW5hbGx5IHsgJGMuQ2xvc2UoKSB9Cn0KCmZ1bmN0aW9uIEdldC1Hd1BpZCB7CiAgdHJ5IHsKICAgICRjID0gR2V0LU5ldFRDUENvbm5lY3Rpb24gLUxvY2FsUG9ydCAkUE9SVCAtU3RhdGUgTGlzdGVuIC1FcnJvckFjdGlvbiBTdG9wIHwgU2VsZWN0LU9iamVjdCAtRmlyc3QgMQogICAgaWYgKCRjIC1uZSAkbnVsbCkgeyByZXR1cm4gW2ludF0kYy5Pd25pbmdQcm9jZXNzIH0KICB9IGNhdGNoIHsgfQogIHJldHVybiAwCn0KCiRzY3JpcHQ6R3dQcm9jID0gJG51bGwKCmZ1bmN0aW9uIFN0YXJ0LUdhdGV3YXkgewogIGlmIChUZXN0LVBvcnQgJFBPUlQpIHsgcmV0dXJuICR0cnVlIH0KICB0cnkgewogICAgJHBzaSA9IE5ldy1PYmplY3QgU3lzdGVtLkRpYWdub3N0aWNzLlByb2Nlc3NTdGFydEluZm8KICAgICRwc2kuRmlsZU5hbWUgPSAkTk9ERQogICAgJHBzaS5Bcmd1bWVudHMgPSAnIicgKyAkR1dKUyArICciIC0tcXVpZXQnCiAgICAkcHNpLldvcmtpbmdEaXJlY3RvcnkgPSAkUk9PVAogICAgJHBzaS5Vc2VTaGVsbEV4ZWN1dGUgPSAkZmFsc2UKICAgICRwc2kuQ3JlYXRlTm9XaW5kb3cgPSAkdHJ1ZQogICAgJHNjcmlwdDpHd1Byb2MgPSBbU3lzdGVtLkRpYWdub3N0aWNzLlByb2Nlc3NdOjpTdGFydCgkcHNpKQogICAgTG9nLVRyYXkgKCflkK/liqjnvZHlhbMgcGlkPScgKyAkc2NyaXB0Okd3UHJvYy5JZCkKICB9IGNhdGNoIHsKICAgIExvZy1UcmF5ICgn5ZCv5Yqo572R5YWz5aSx6LSlOiAnICsgJF8uRXhjZXB0aW9uLk1lc3NhZ2UpCiAgICByZXR1cm4gJGZhbHNlCiAgfQogIGZvciAoJGkgPSAwOyAkaSAtbHQgMjQ7ICRpKyspIHsKICAgIFN0YXJ0LVNsZWVwIC1NaWxsaXNlY29uZHMgMjUwCiAgICBpZiAoVGVzdC1Qb3J0ICRQT1JUKSB7IHJldHVybiAkdHJ1ZSB9CiAgfQogIHJldHVybiAoVGVzdC1Qb3J0ICRQT1JUKQp9CgpmdW5jdGlvbiBTdG9wLUdhdGV3YXkgewogICRnd1BpZCA9IEdldC1Hd1BpZAogIGlmICgkZ3dQaWQgLWd0IDApIHsKICAgIHRyeSB7CiAgICAgIFN0b3AtUHJvY2VzcyAtSWQgJGd3UGlkIC1Gb3JjZSAtQ29uZmlybTokZmFsc2UgLUVycm9yQWN0aW9uIFN0b3AKICAgICAgTG9nLVRyYXkgKCfnu5PmnZ/nvZHlhbMgcGlkPScgKyAkZ3dQaWQpCiAgICB9IGNhdGNoIHsgTG9nLVRyYXkgKCfnu5PmnZ/nvZHlhbPlpLHotKU6ICcgKyAkXy5FeGNlcHRpb24uTWVzc2FnZSkgfQogIH0KICBpZiAoJHNjcmlwdDpHd1Byb2MgLW5lICRudWxsKSB7CiAgICB0cnkgeyBpZiAoLW5vdCAkc2NyaXB0Okd3UHJvYy5IYXNFeGl0ZWQpIHsgJHNjcmlwdDpHd1Byb2MuS2lsbCgpIH0gfSBjYXRjaCB7IH0KICAgICRzY3JpcHQ6R3dQcm9jID0gJG51bGwKICB9CiAgU3RhcnQtU2xlZXAgLU1pbGxpc2Vjb25kcyA2MDAKfQoKZnVuY3Rpb24gSW52b2tlLUFjdChbc3RyaW5nXSRhY3QsIFtpbnRdJHRpbWVvdXQgPSAzMCkgewogIHRyeSB7CiAgICAkdXJpID0gJ2h0dHA6Ly8xMjcuMC4wLjE6JyArICRQT1JUICsgJy9hZG1pbi9hcGkvYWN0aW9uJwogICAgJGJvZHkgPSAneyJkbyI6IicgKyAkYWN0ICsgJyJ9JwogICAgJHIgPSBJbnZva2UtUmVzdE1ldGhvZCAtVXJpICR1cmkgLU1ldGhvZCBQb3N0IC1Cb2R5ICRib2R5IC1Db250ZW50VHlwZSAnYXBwbGljYXRpb24vanNvbicgLVRpbWVvdXRTZWMgJHRpbWVvdXQKICAgIGlmICgkciAtbmUgJG51bGwgLWFuZCAkci5vayAtZXEgJGZhbHNlKSB7IHJldHVybiAoJ+Wksei0pe+8micgKyAkci5lcnJvcikgfQogICAgcmV0dXJuICcnCiAgfSBjYXRjaCB7CiAgICByZXR1cm4gKCflpLHotKXvvJonICsgJF8uRXhjZXB0aW9uLk1lc3NhZ2UpCiAgfQp9CgojIC0tLS0tLS0tLS0g5Zu+5qCHIC0tLS0tLS0tLS0KCiRzY3JpcHQ6S2VlcCA9IEAoKQoKZnVuY3Rpb24gUm91bmQtUGF0aChbaW50XSR4LCBbaW50XSR5LCBbaW50XSR3LCBbaW50XSRoLCBbaW50XSRyKSB7CiAgJHAgPSBOZXctT2JqZWN0IFN5c3RlbS5EcmF3aW5nLkRyYXdpbmcyRC5HcmFwaGljc1BhdGgKICAkZCA9ICRyICogMgogICRwLkFkZEFyYygkeCwgJHksICRkLCAkZCwgMTgwLCA5MCkKICAkcC5BZGRBcmMoKCR4ICsgJHcgLSAkZCksICR5LCAkZCwgJGQsIDI3MCwgOTApCiAgJHAuQWRkQXJjKCgkeCArICR3IC0gJGQpLCAoJHkgKyAkaCAtICRkKSwgJGQsICRkLCAwLCA5MCkKICAkcC5BZGRBcmMoJHgsICgkeSArICRoIC0gJGQpLCAkZCwgJGQsIDkwLCA5MCkKICAkcC5DbG9zZUZpZ3VyZSgpCiAgcmV0dXJuICRwCn0KCmZ1bmN0aW9uIE5ldy1UcmF5SWNvbihbc3RyaW5nXSRoZXgpIHsKICAkY29sID0gW1N5c3RlbS5EcmF3aW5nLkNvbG9yVHJhbnNsYXRvcl06OkZyb21IdG1sKCRoZXgpCiAgJGJtcCA9IE5ldy1PYmplY3QgU3lzdGVtLkRyYXdpbmcuQml0bWFwIDY0LCA2NAogICRnID0gW1N5c3RlbS5EcmF3aW5nLkdyYXBoaWNzXTo6RnJvbUltYWdlKCRibXApCiAgJGcuU21vb3RoaW5nTW9kZSA9IFtTeXN0ZW0uRHJhd2luZy5EcmF3aW5nMkQuU21vb3RoaW5nTW9kZV06OkFudGlBbGlhcwogICRnLlRleHRSZW5kZXJpbmdIaW50ID0gW1N5c3RlbS5EcmF3aW5nLlRleHQuVGV4dFJlbmRlcmluZ0hpbnRdOjpBbnRpQWxpYXNHcmlkRml0CiAgJGcuQ2xlYXIoW1N5c3RlbS5EcmF3aW5nLkNvbG9yXTo6VHJhbnNwYXJlbnQpCiAgJHBhdGggPSBSb3VuZC1QYXRoIDIgMiA2MCA2MCAxNgogICRicnVzaCA9IE5ldy1PYmplY3QgU3lzdGVtLkRyYXdpbmcuU29saWRCcnVzaCgkY29sKQogICRnLkZpbGxQYXRoKCRicnVzaCwgJHBhdGgpCiAgJGZvbnQgPSBOZXctT2JqZWN0IFN5c3RlbS5EcmF3aW5nLkZvbnQoJ1NlZ29lIFVJJywgNDAsIFtTeXN0ZW0uRHJhd2luZy5Gb250U3R5bGVdOjpCb2xkLCBbU3lzdGVtLkRyYXdpbmcuR3JhcGhpY3NVbml0XTo6UGl4ZWwpCiAgJGZtdCA9IE5ldy1PYmplY3QgU3lzdGVtLkRyYXdpbmcuU3RyaW5nRm9ybWF0CiAgJGZtdC5BbGlnbm1lbnQgPSBbU3lzdGVtLkRyYXdpbmcuU3RyaW5nQWxpZ25tZW50XTo6Q2VudGVyCiAgJGZtdC5MaW5lQWxpZ25tZW50ID0gW1N5c3RlbS5EcmF3aW5nLlN0cmluZ0FsaWdubWVudF06OkNlbnRlcgogICR3YnIgPSBOZXctT2JqZWN0IFN5c3RlbS5EcmF3aW5nLlNvbGlkQnJ1c2goW1N5c3RlbS5EcmF3aW5nLkNvbG9yXTo6V2hpdGUpCiAgJHJlY3QgPSBOZXctT2JqZWN0IFN5c3RlbS5EcmF3aW5nLlJlY3RhbmdsZUYgLUFyZ3VtZW50TGlzdCAwLCAwLCA2NCwgNjIKICAkZy5EcmF3U3RyaW5nKCdHJywgJGZvbnQsICR3YnIsICRyZWN0LCAkZm10KQogICRnLkRpc3Bvc2UoKQogICRzY3JpcHQ6S2VlcCArPSAkYm1wCiAgcmV0dXJuIFtTeXN0ZW0uRHJhd2luZy5JY29uXTo6RnJvbUhhbmRsZSgkYm1wLkdldEhpY29uKCkpCn0KCiRpY29PayA9IE5ldy1UcmF5SWNvbiAnIzI1NjNlYicKJGljb09mZiA9IE5ldy1UcmF5SWNvbiAnI2RjMjYyNicKCiMgLS0tLS0tLS0tLSDmiZjnm5ggLS0tLS0tLS0tLQoKJG5pID0gTmV3LU9iamVjdCBTeXN0ZW0uV2luZG93cy5Gb3Jtcy5Ob3RpZnlJY29uCiRuaS5JY29uID0gJGljb09rCiRuaS5UZXh0ID0gJ0NsYXVkZSDnvZHlhbMgwrcg5q2j5Zyo5ZCv5YqoJwokbmkuVmlzaWJsZSA9ICR0cnVlCgpmdW5jdGlvbiBUaXAoW3N0cmluZ10kdGl0bGUsIFtzdHJpbmddJG1zZykgewogIHRyeSB7CiAgICAkbmkuQmFsbG9vblRpcFRpdGxlID0gJHRpdGxlCiAgICAkbmkuQmFsbG9vblRpcFRleHQgPSAkbXNnCiAgICAkbmkuQmFsbG9vblRpcEljb24gPSBbU3lzdGVtLldpbmRvd3MuRm9ybXMuVG9vbFRpcEljb25dOjpOb25lCiAgICAkbmkuU2hvd0JhbGxvb25UaXAoMzUwMCkKICB9IGNhdGNoIHsgfQp9CgpmdW5jdGlvbiBPcGVuLVBhbmVsIHsKICB0cnkgewogICAgU3RhcnQtUHJvY2VzcyAtRmlsZVBhdGggJ3Bvd2Vyc2hlbGwuZXhlJyAtV2luZG93U3R5bGUgSGlkZGVuIC1Bcmd1bWVudExpc3QgQCgKICAgICAgJy1Ob1Byb2ZpbGUnLCAnLUV4ZWN1dGlvblBvbGljeScsICdCeXBhc3MnLCAnLVdpbmRvd1N0eWxlJywgJ0hpZGRlbicsCiAgICAgICctRmlsZScsIChKb2luLVBhdGggJFJPT1QgJ29wZW4tcGFuZWwucHMxJykKICAgICkKICB9IGNhdGNoIHsgTG9nLVRyYXkgKCfmiZPlvIDpnaLmnb/lpLHotKU6ICcgKyAkXy5FeGNlcHRpb24uTWVzc2FnZSkgfQp9CgokbWVudSA9IE5ldy1PYmplY3QgU3lzdGVtLldpbmRvd3MuRm9ybXMuQ29udGV4dE1lbnVTdHJpcAokbWVudS5TaG93SW1hZ2VNYXJnaW4gPSAkZmFsc2UKJGJvbGRGb250ID0gTmV3LU9iamVjdCBTeXN0ZW0uRHJhd2luZy5Gb250KCdNaWNyb3NvZnQgWWFIZWkgVUknLCA5LCBbU3lzdGVtLkRyYXdpbmcuRm9udFN0eWxlXTo6Qm9sZCkKCiRtaU9wZW4gPSBOZXctT2JqZWN0IFN5c3RlbS5XaW5kb3dzLkZvcm1zLlRvb2xTdHJpcE1lbnVJdGVtCiRtaU9wZW4uVGV4dCA9ICfmiZPlvIDmjqfliLbpnaLmnb8nCiRtaU9wZW4uRm9udCA9ICRib2xkRm9udAoKJG1pU3RhdCA9IE5ldy1PYmplY3QgU3lzdGVtLldpbmRvd3MuRm9ybXMuVG9vbFN0cmlwTWVudUl0ZW0KJG1pU3RhdC5UZXh0ID0gJ+eKtuaAge+8muajgOafpeS4reKApicKJG1pU3RhdC5FbmFibGVkID0gJGZhbHNlCgokbWlSZXN0YXJ0ID0gTmV3LU9iamVjdCBTeXN0ZW0uV2luZG93cy5Gb3Jtcy5Ub29sU3RyaXBNZW51SXRlbQokbWlSZXN0YXJ0LlRleHQgPSAn6YeN5ZCv572R5YWzJwoKJG1pTWFncGllID0gTmV3LU9iamVjdCBTeXN0ZW0uV2luZG93cy5Gb3Jtcy5Ub29sU3RyaXBNZW51SXRlbQokbWlNYWdwaWUuVGV4dCA9ICfph43lkK8v5omT5byAIE1hZ3BpZScKCiRtaVJlc3RvcmUgPSBOZXctT2JqZWN0IFN5c3RlbS5XaW5kb3dzLkZvcm1zLlRvb2xTdHJpcE1lbnVJdGVtCiRtaVJlc3RvcmUuVGV4dCA9ICfmgaLlpI3ljp/oo4UgQ2xhdWRlIOiuvue9ricKCiRtaUNsYXVkZSA9IE5ldy1PYmplY3QgU3lzdGVtLldpbmRvd3MuRm9ybXMuVG9vbFN0cmlwTWVudUl0ZW0KJG1pQ2xhdWRlLlRleHQgPSAn6YeN5ZCvL+aJk+W8gCBDbGF1ZGUgRGVza3RvcCcKCiRtaUxvZyA9IE5ldy1PYmplY3QgU3lzdGVtLldpbmRvd3MuRm9ybXMuVG9vbFN0cmlwTWVudUl0ZW0KJG1pTG9nLlRleHQgPSAn5omT5byA572R5YWz5pel5b+XJwoKJG1pQ2ZnID0gTmV3LU9iamVjdCBTeXN0ZW0uV2luZG93cy5Gb3Jtcy5Ub29sU3RyaXBNZW51SXRlbQokbWlDZmcuVGV4dCA9ICfmiZPlvIDphY3nva7nm67lvZUnCgokbWlRdWl0ID0gTmV3LU9iamVjdCBTeXN0ZW0uV2luZG93cy5Gb3Jtcy5Ub29sU3RyaXBNZW51SXRlbQokbWlRdWl0LlRleHQgPSAn6YCA5Ye6JwoKJG51bGwgPSAkbWVudS5JdGVtcy5BZGQoJG1pT3BlbikKJG51bGwgPSAkbWVudS5JdGVtcy5BZGQoJG1pU3RhdCkKJG51bGwgPSAkbWVudS5JdGVtcy5BZGQoKE5ldy1PYmplY3QgU3lzdGVtLldpbmRvd3MuRm9ybXMuVG9vbFN0cmlwU2VwYXJhdG9yKSkKJG51bGwgPSAkbWVudS5JdGVtcy5BZGQoJG1pUmVzdGFydCkKJG51bGwgPSAkbWVudS5JdGVtcy5BZGQoJG1pTWFncGllKQokbnVsbCA9ICRtZW51Lkl0ZW1zLkFkZCgkbWlSZXN0b3JlKQokbnVsbCA9ICRtZW51Lkl0ZW1zLkFkZCgkbWlDbGF1ZGUpCiRudWxsID0gJG1lbnUuSXRlbXMuQWRkKChOZXctT2JqZWN0IFN5c3RlbS5XaW5kb3dzLkZvcm1zLlRvb2xTdHJpcFNlcGFyYXRvcikpCiRudWxsID0gJG1lbnUuSXRlbXMuQWRkKCRtaUxvZykKJG51bGwgPSAkbWVudS5JdGVtcy5BZGQoJG1pQ2ZnKQokbnVsbCA9ICRtZW51Lkl0ZW1zLkFkZCgoTmV3LU9iamVjdCBTeXN0ZW0uV2luZG93cy5Gb3Jtcy5Ub29sU3RyaXBTZXBhcmF0b3IpKQokbnVsbCA9ICRtZW51Lkl0ZW1zLkFkZCgkbWlRdWl0KQoKJG5pLkNvbnRleHRNZW51U3RyaXAgPSAkbWVudQokbmkuYWRkX01vdXNlRG91YmxlQ2xpY2soeyBPcGVuLVBhbmVsIH0pCgokbWVudS5hZGRfT3BlbmluZyh7CiAgaWYgKFRlc3QtUG9ydCAkUE9SVCkgewogICAgJG1pU3RhdC5UZXh0ID0gJ+eKtuaAge+8mue9keWFs+i/kOihjOS4rSDCtyDnq6/lj6MgMTU3MjInCiAgICAkbWlSZXN0YXJ0LkVuYWJsZWQgPSAkdHJ1ZQogICAgJG1pTWFncGllLkVuYWJsZWQgPSAkdHJ1ZQogICAgJG1pUmVzdG9yZS5FbmFibGVkID0gJHRydWUKICAgICRtaUNsYXVkZS5FbmFibGVkID0gJHRydWUKICAgICRtaUNmZy5FbmFibGVkID0gJHRydWUKICB9IGVsc2UgewogICAgJG1pU3RhdC5UZXh0ID0gJ+eKtuaAge+8mue9keWFs+W3suWBnOatou+8iOeCueOAjOmHjeWQr+e9keWFs+OAje+8iScKICAgICRtaVJlc3RhcnQuRW5hYmxlZCA9ICR0cnVlCiAgICAkbWlNYWdwaWUuRW5hYmxlZCA9ICRmYWxzZQogICAgJG1pUmVzdG9yZS5FbmFibGVkID0gJGZhbHNlCiAgICAkbWlDbGF1ZGUuRW5hYmxlZCA9ICR0cnVlCiAgICAkbWlDZmcuRW5hYmxlZCA9ICR0cnVlCiAgfQp9KQoKJG1pT3Blbi5hZGRfQ2xpY2soeyBPcGVuLVBhbmVsIH0pCgokbWlSZXN0YXJ0LmFkZF9DbGljayh7CiAgTG9nLVRyYXkgJ+iPnOWNle+8mumHjeWQr+e9keWFsycKICBTdG9wLUdhdGV3YXkKICBpZiAoU3RhcnQtR2F0ZXdheSkgewogICAgTG9nLVRyYXkgJ+iPnOWNle+8mumHjeWQr+e9keWFs+aIkOWKnycKICAgIFRpcCAnQ2xhdWRlIOe9keWFsycgJ+e9keWFs+W3sumHjeWQr+OAgicKICB9IGVsc2UgewogICAgTG9nLVRyYXkgJ+iPnOWNle+8mumHjeWQr+e9keWFs+Wksei0pScKICAgIFRpcCAnQ2xhdWRlIOe9keWFsycgJ+e9keWFs+ayoeiDvei1t+adpe+8jOivt+aJk+W8gOaXpeW/l+afpeeci+WOn+WboOOAgicKICB9Cn0pCgokbWlNYWdwaWUuYWRkX0NsaWNrKHsKICBMb2ctVHJheSAn6I+c5Y2V77ya6YeN5ZCvL+aJk+W8gCBNYWdwaWUnCiAgJGVyciA9IEludm9rZS1BY3QgJ3Jlc3RhcnQtbWFncGllJwogIGlmICgkZXJyIC1uZSAnJykgeyBUaXAgJ01hZ3BpZScgJGVycjsgTG9nLVRyYXkgKCfph43lkK8v5omT5byAIE1hZ3BpZSAnICsgJGVycikgfSBlbHNlIHsgVGlwICdNYWdwaWUnICflt7Llj5HpgIHph43lkK8v5omT5byA5oyH5Luk77yM57qmIDIg56eS5ZCO5Y+v55So44CCJyB9Cn0pCgokbWlSZXN0b3JlLmFkZF9DbGljayh7CiAgTG9nLVRyYXkgJ+iPnOWNle+8muaBouWkjeWOn+ijhSBDbGF1ZGUg6K6+572uJwogICRlcnIgPSBJbnZva2UtQWN0ICdyZXN0b3JlLW9yaWdpbmFsJwogIGlmICgkZXJyIC1uZSAnJykgeyBUaXAgJ+mFjee9ricgJGVycjsgTG9nLVRyYXkgKCfmgaLlpI3ljp/oo4XphY3nva4gJyArICRlcnIpIH0gZWxzZSB7IFRpcCAn6YWN572uJyAn5bey5oGi5aSN5Y6f6KOFIENsYXVkZSDorr7nva7vvIzph43lkK8gQ2xhdWRlIOWQjueUn+aViOOAgicgfQp9KQoKJG1pQ2xhdWRlLmFkZF9DbGljayh7CiAgTG9nLVRyYXkgJ+iPnOWNle+8mumHjeWQry/miZPlvIAgQ2xhdWRlJwogICRlcnIgPSBJbnZva2UtQWN0ICdyZXN0YXJ0LWNsYXVkZScgNDUKICBpZiAoJGVyciAtbmUgJycpIHsgVGlwICdDbGF1ZGUnICRlcnI7IExvZy1UcmF5ICgn6YeN5ZCvL+aJk+W8gCBDbGF1ZGUgJyArICRlcnIpIH0gZWxzZSB7IFRpcCAnQ2xhdWRlJyAnQ2xhdWRlIOW3sumHjeaWsOaJk+W8gOOAgicgfQp9KQoKJG1pTG9nLmFkZF9DbGljayh7CiAgJGYgPSBKb2luLVBhdGggJFJPT1QgJ2dhdGV3YXkubG9nJwogIGlmIChUZXN0LVBhdGggLUxpdGVyYWxQYXRoICRmKSB7IFN0YXJ0LVByb2Nlc3Mgbm90ZXBhZC5leGUgJGYgfSBlbHNlIHsgVGlwICfml6Xlv5cnICfov5jmsqHmnInml6Xlv5fmlofku7bjgIInIH0KfSkKCiRtaUNmZy5hZGRfQ2xpY2soewogICRlcnIgPSBJbnZva2UtQWN0ICdvcGVuLWNvbmZpZycKICBpZiAoJGVyciAtbmUgJycpIHsgU3RhcnQtUHJvY2VzcyBleHBsb3Jlci5leGUgJFJPT1QgfQp9KQoKZnVuY3Rpb24gSW52b2tlLVF1aXQgewogIExvZy1UcmF5ICfmiafooYzpgIDlh7rvvJrlhbPpl63nvZHlhbPlubbnu5PmnZ/miZjnm5gnCiAgJHNjcmlwdDpUaW1lci5TdG9wKCkKICBOZXctSXRlbSAtSXRlbVR5cGUgRmlsZSAtUGF0aCAkRkxBRyAtRm9yY2UgfCBPdXQtTnVsbAogIFN0b3AtR2F0ZXdheQogICMg5YWc5bqV77ya5Y+N5aSN56Gu6K6k56uv5Y+j5bey6YeK5pS+77yM56Gu5L+d5LiN55WZ5LiL5Lu75L2VIG5vZGUg6L+b56iLCiAgZm9yICgkaSA9IDA7ICRpIC1sdCAxMDsgJGkrKykgewogICAgaWYgKC1ub3QgKFRlc3QtUG9ydCAkUE9SVCkpIHsgYnJlYWsgfQogICAgJHAgPSBHZXQtR3dQaWQKICAgIGlmICgkcCAtZ3QgMCkgeyBTdG9wLVByb2Nlc3MgLUlkICRwIC1Gb3JjZSAtQ29uZmlybTokZmFsc2UgLUVycm9yQWN0aW9uIFNpbGVudGx5Q29udGludWUgfQogICAgU3RhcnQtU2xlZXAgLU1pbGxpc2Vjb25kcyAyNTAKICB9CiAgJG5pLlZpc2libGUgPSAkZmFsc2UKICAkbmkuRGlzcG9zZSgpCiAgTG9nLVRyYXkgKCflt7LpgIDlh7rvvIznvZHlhbPnq6/lj6Pku43lnKjov5DooYw9JyArIChUZXN0LVBvcnQgJFBPUlQpKQogIFtTeXN0ZW0uV2luZG93cy5Gb3Jtcy5BcHBsaWNhdGlvbl06OkV4aXQoKQp9CgokbWlRdWl0LmFkZF9DbGljayh7IEludm9rZS1RdWl0IH0pCgojIC0tLS0tLS0tLS0g55yL5oqkIC0tLS0tLS0tLS0KCiRzY3JpcHQ6VGlja0NvdW50ID0gMAokc2NyaXB0Ok1vZGVsQ291bnQgPSAwCgpmdW5jdGlvbiBSZWZyZXNoLVRpcChbYm9vbF0kb2spIHsKICBpZiAoJG9rKSB7CiAgICAkbmkuSWNvbiA9ICRpY29PawogICAgJHQgPSAnQ2xhdWRlIOe9keWFsyDCtyDov5DooYzkuK0nCiAgICBpZiAoJHNjcmlwdDpNb2RlbENvdW50IC1ndCAwKSB7ICR0ID0gJHQgKyAnIMK3ICcgKyAkc2NyaXB0Ok1vZGVsQ291bnQgKyAnIOS4quaooeWeiycgfQogICAgaWYgKCR0Lkxlbmd0aCAtbGUgNjMpIHsgJG5pLlRleHQgPSAkdCB9CiAgfSBlbHNlIHsKICAgICRuaS5JY29uID0gJGljb09mZgogICAgJG5pLlRleHQgPSAnQ2xhdWRlIOe9keWFsyDCtyDlt7LlgZzmraInCiAgfQp9CgpmdW5jdGlvbiBVcGRhdGUtTW9kZWxzIHsKICB0cnkgewogICAgJHIgPSBJbnZva2UtUmVzdE1ldGhvZCAtVXJpICgnaHR0cDovLzEyNy4wLjAuMTonICsgJFBPUlQgKyAnL2FkbWluL2FwaS9tb2RlbHMnKSAtVGltZW91dFNlYyA0CiAgICBpZiAoJHIgLW5lICRudWxsIC1hbmQgJHIubW9kZWxzIC1uZSAkbnVsbCkgeyAkc2NyaXB0Ok1vZGVsQ291bnQgPSAkci5tb2RlbHMuQ291bnQgfQogIH0gY2F0Y2ggeyB9Cn0KClN0YXJ0LUdhdGV3YXkKVXBkYXRlLU1vZGVscwpSZWZyZXNoLVRpcCAoVGVzdC1Qb3J0ICRQT1JUKQpMb2ctVHJheSAoJ+aJmOebmOW3suWQr+WKqO+8jOe9keWFs+err+WPoyAnICsgJFBPUlQgKyAnICcgKyAoVGVzdC1Qb3J0ICRQT1JUKSkKCiRzY3JpcHQ6VGltZXIgPSBOZXctT2JqZWN0IFN5c3RlbS5XaW5kb3dzLkZvcm1zLlRpbWVyCiRzY3JpcHQ6VGltZXIuSW50ZXJ2YWwgPSA1MDAwCiRzY3JpcHQ6VGltZXIuYWRkX1RpY2soewogICRzY3JpcHQ6VGlja0NvdW50ID0gJHNjcmlwdDpUaWNrQ291bnQgKyAxCiAgJG9rID0gVGVzdC1Qb3J0ICRQT1JUCiAgaWYgKC1ub3QgJG9rKSB7CiAgICBMb2ctVHJheSAn5Y+R546w572R5YWz5o6J57q/77yM6Ieq5Yqo5ouJ6LW3JwogICAgJG9rID0gU3RhcnQtR2F0ZXdheQogICAgaWYgKCRvaykgeyBVcGRhdGUtTW9kZWxzIH0KICB9IGVsc2VpZiAoKCRzY3JpcHQ6VGlja0NvdW50ICUgNikgLWVxIDApIHsKICAgIFVwZGF0ZS1Nb2RlbHMKICB9CiAgUmVmcmVzaC1UaXAgJG9rCn0pCiRzY3JpcHQ6VGltZXIuU3RhcnQoKQoKIyDoh6rmtYvlvIDlhbPvvJrlkK/liqjml7bluKYgLS1xdWl0LXRlc3TvvIwzIOenkuWQjuiHquWKqOi1sOS4gOmBjeWSjOiPnOWNleOAjOmAgOWHuuOAjeWujOWFqOebuOWQjOeahOa1geeoiwppZiAoJGFyZ3MgLWNvbnRhaW5zICctLXF1aXQtdGVzdCcpIHsKICBMb2ctVHJheSAn6Ieq5rWL77yaMyDnp5LlkI7oh6rliqjmiafooYzpgIDlh7onCiAgJHNjcmlwdDpRVGltZXIgPSBOZXctT2JqZWN0IFN5c3RlbS5XaW5kb3dzLkZvcm1zLlRpbWVyCiAgJHNjcmlwdDpRVGltZXIuSW50ZXJ2YWwgPSAzMDAwCiAgJHNjcmlwdDpRVGltZXIuYWRkX1RpY2soeyAkc2NyaXB0OlFUaW1lci5TdG9wKCk7IEludm9rZS1RdWl0IH0pCiAgJHNjcmlwdDpRVGltZXIuU3RhcnQoKQp9CgpbU3lzdGVtLldpbmRvd3MuRm9ybXMuQXBwbGljYXRpb25dOjpSdW4oKQoKJHNjcmlwdDpUaW1lci5TdG9wKCkKdHJ5IHsgJG5pLlZpc2libGUgPSAkZmFsc2U7ICRuaS5EaXNwb3NlKCkgfSBjYXRjaCB7IH0KTG9nLVRyYXkgJ+a2iOaBr+W+queOr+e7k+adnycK
+﻿# Claude 网关托盘程序
+# 作用：以无窗口方式守护网关，右下角托盘图标提供右键菜单
+#   点面板窗口的叉 = 只是关掉面板，程序仍在托盘运行
+#   托盘菜单「退出」= 真正关闭（写 .tray-off 标记并结束网关）
+# 启动方式：tray-launch.vbs（wscript 隐藏窗口）→ 本脚本
+# 注意：本文件必须是 UTF-8 带 BOM，否则 PowerShell 5.1 会把中文读成乱码
+
+$ErrorActionPreference = 'Stop'
+
+Add-Type -AssemblyName System.Windows.Forms
+Add-Type -AssemblyName System.Drawing
+
+$ROOT = $PSScriptRoot
+if (-not $ROOT) { $ROOT = Split-Path -Parent $MyInvocation.MyCommand.Path }
+$NODE = Join-Path $ROOT 'node.exe'
+$GWJS = Join-Path $ROOT 'gateway.js'
+$TLOG = Join-Path $ROOT 'tray.log'
+$FLAG = Join-Path $ROOT '.tray-off'
+$PORT = 15722
+
+function Log-Tray([string]$m) {
+  try {
+    if ((Test-Path -LiteralPath $TLOG) -and ((Get-Item -LiteralPath $TLOG).Length -gt 1048576)) {
+      Move-Item -LiteralPath $TLOG -Destination ($TLOG + '.1') -Force
+    }
+    "$(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')  $m" | Add-Content -LiteralPath $TLOG -Encoding UTF8
+  } catch { }
+}
+
+# 用户点过「退出」就不要自己回来（计划任务每 2 分钟会调一次本脚本）
+if (Test-Path -LiteralPath $FLAG) { Log-Tray 'flag .tray-off 存在，托盘不启动'; exit 0 }
+
+# 单实例
+$created = $false
+$script:MTX = [System.Threading.Mutex]::new($true, 'Local\ClaudeGatewayTray', [ref]$created)
+if (-not $created) { exit 0 }
+
+function Test-Port([int]$p) {
+  $c = New-Object System.Net.Sockets.TcpClient
+  try {
+    $iar = $c.BeginConnect('127.0.0.1', $p, $null, $null)
+    if ($iar.AsyncWaitHandle.WaitOne(400) -and $c.Connected) { return $true }
+    return $false
+  } catch { return $false } finally { $c.Close() }
+}
+
+function Get-GwPid {
+  try {
+    $c = Get-NetTCPConnection -LocalPort $PORT -State Listen -ErrorAction Stop | Select-Object -First 1
+    if ($c -ne $null) { return [int]$c.OwningProcess }
+  } catch { }
+  return 0
+}
+
+$script:GwProc = $null
+
+function Start-Gateway {
+  if (Test-Port $PORT) { return $true }
+  try {
+    $psi = New-Object System.Diagnostics.ProcessStartInfo
+    $psi.FileName = $NODE
+    $psi.Arguments = '"' + $GWJS + '" --quiet'
+    $psi.WorkingDirectory = $ROOT
+    $psi.UseShellExecute = $false
+    $psi.CreateNoWindow = $true
+    $script:GwProc = [System.Diagnostics.Process]::Start($psi)
+    Log-Tray ('启动网关 pid=' + $script:GwProc.Id)
+  } catch {
+    Log-Tray ('启动网关失败: ' + $_.Exception.Message)
+    return $false
+  }
+  for ($i = 0; $i -lt 24; $i++) {
+    Start-Sleep -Milliseconds 250
+    if (Test-Port $PORT) { return $true }
+  }
+  return (Test-Port $PORT)
+}
+
+function Stop-Gateway {
+  $gwPid = Get-GwPid
+  if ($gwPid -gt 0) {
+    try {
+      Stop-Process -Id $gwPid -Force -Confirm:$false -ErrorAction Stop
+      Log-Tray ('结束网关 pid=' + $gwPid)
+    } catch { Log-Tray ('结束网关失败: ' + $_.Exception.Message) }
+  }
+  if ($script:GwProc -ne $null) {
+    try { if (-not $script:GwProc.HasExited) { $script:GwProc.Kill() } } catch { }
+    $script:GwProc = $null
+  }
+  Start-Sleep -Milliseconds 600
+}
+
+function Invoke-Act([string]$act, [int]$timeout = 30) {
+  try {
+    $uri = 'http://127.0.0.1:' + $PORT + '/admin/api/action'
+    $body = '{"do":"' + $act + '"}'
+    $r = Invoke-RestMethod -Uri $uri -Method Post -Body $body -ContentType 'application/json' -TimeoutSec $timeout
+    if ($r -ne $null -and $r.ok -eq $false) { return ('失败：' + $r.error) }
+    return ''
+  } catch {
+    return ('失败：' + $_.Exception.Message)
+  }
+}
+
+# ---------- 图标 ----------
+
+$script:Keep = @()
+
+function Round-Path([int]$x, [int]$y, [int]$w, [int]$h, [int]$r) {
+  $p = New-Object System.Drawing.Drawing2D.GraphicsPath
+  $d = $r * 2
+  $p.AddArc($x, $y, $d, $d, 180, 90)
+  $p.AddArc(($x + $w - $d), $y, $d, $d, 270, 90)
+  $p.AddArc(($x + $w - $d), ($y + $h - $d), $d, $d, 0, 90)
+  $p.AddArc($x, ($y + $h - $d), $d, $d, 90, 90)
+  $p.CloseFigure()
+  return $p
+}
+
+function New-TrayIcon([string]$hex) {
+  $col = [System.Drawing.ColorTranslator]::FromHtml($hex)
+  $bmp = New-Object System.Drawing.Bitmap 64, 64
+  $g = [System.Drawing.Graphics]::FromImage($bmp)
+  $g.SmoothingMode = [System.Drawing.Drawing2D.SmoothingMode]::AntiAlias
+  $g.TextRenderingHint = [System.Drawing.Text.TextRenderingHint]::AntiAliasGridFit
+  $g.Clear([System.Drawing.Color]::Transparent)
+  $path = Round-Path 2 2 60 60 16
+  $brush = New-Object System.Drawing.SolidBrush($col)
+  $g.FillPath($brush, $path)
+  $font = New-Object System.Drawing.Font('Segoe UI', 40, [System.Drawing.FontStyle]::Bold, [System.Drawing.GraphicsUnit]::Pixel)
+  $fmt = New-Object System.Drawing.StringFormat
+  $fmt.Alignment = [System.Drawing.StringAlignment]::Center
+  $fmt.LineAlignment = [System.Drawing.StringAlignment]::Center
+  $wbr = New-Object System.Drawing.SolidBrush([System.Drawing.Color]::White)
+  $rect = New-Object System.Drawing.RectangleF -ArgumentList 0, 0, 64, 62
+  $g.DrawString('G', $font, $wbr, $rect, $fmt)
+  $g.Dispose()
+  $script:Keep += $bmp
+  return [System.Drawing.Icon]::FromHandle($bmp.GetHicon())
+}
+
+$icoOk = New-TrayIcon '#2563eb'
+$icoOff = New-TrayIcon '#dc2626'
+
+# ---------- 托盘 ----------
+
+$ni = New-Object System.Windows.Forms.NotifyIcon
+$ni.Icon = $icoOk
+$ni.Text = 'Claude 网关 · 正在启动'
+$ni.Visible = $true
+
+function Tip([string]$title, [string]$msg) {
+  try {
+    $ni.BalloonTipTitle = $title
+    $ni.BalloonTipText = $msg
+    $ni.BalloonTipIcon = [System.Windows.Forms.ToolTipIcon]::None
+    $ni.ShowBalloonTip(3500)
+  } catch { }
+}
+
+function Open-Panel {
+  try {
+    Start-Process -FilePath 'powershell.exe' -WindowStyle Hidden -ArgumentList @(
+      '-NoProfile', '-ExecutionPolicy', 'Bypass', '-WindowStyle', 'Hidden',
+      '-File', (Join-Path $ROOT 'open-panel.ps1')
+    )
+  } catch { Log-Tray ('打开面板失败: ' + $_.Exception.Message) }
+}
+
+$menu = New-Object System.Windows.Forms.ContextMenuStrip
+$menu.ShowImageMargin = $false
+$boldFont = New-Object System.Drawing.Font('Microsoft YaHei UI', 9, [System.Drawing.FontStyle]::Bold)
+
+$miOpen = New-Object System.Windows.Forms.ToolStripMenuItem
+$miOpen.Text = '打开控制面板'
+$miOpen.Font = $boldFont
+
+$miStat = New-Object System.Windows.Forms.ToolStripMenuItem
+$miStat.Text = '状态：检查中…'
+$miStat.Enabled = $false
+
+$miRestart = New-Object System.Windows.Forms.ToolStripMenuItem
+$miRestart.Text = '重启网关'
+
+$miMagpie = New-Object System.Windows.Forms.ToolStripMenuItem
+$miMagpie.Text = '重启/打开 Magpie'
+
+$miRestore = New-Object System.Windows.Forms.ToolStripMenuItem
+$miRestore.Text = '恢复原装 Claude 设置'
+
+$miClaude = New-Object System.Windows.Forms.ToolStripMenuItem
+$miClaude.Text = '重启/打开 Claude Desktop'
+
+$miLog = New-Object System.Windows.Forms.ToolStripMenuItem
+$miLog.Text = '打开网关日志'
+
+$miCfg = New-Object System.Windows.Forms.ToolStripMenuItem
+$miCfg.Text = '打开配置目录'
+
+$miQuit = New-Object System.Windows.Forms.ToolStripMenuItem
+$miQuit.Text = '退出'
+
+$null = $menu.Items.Add($miOpen)
+$null = $menu.Items.Add($miStat)
+$null = $menu.Items.Add((New-Object System.Windows.Forms.ToolStripSeparator))
+$null = $menu.Items.Add($miRestart)
+$null = $menu.Items.Add($miMagpie)
+$null = $menu.Items.Add($miRestore)
+$null = $menu.Items.Add($miClaude)
+$null = $menu.Items.Add((New-Object System.Windows.Forms.ToolStripSeparator))
+$null = $menu.Items.Add($miLog)
+$null = $menu.Items.Add($miCfg)
+$null = $menu.Items.Add((New-Object System.Windows.Forms.ToolStripSeparator))
+$null = $menu.Items.Add($miQuit)
+
+$ni.ContextMenuStrip = $menu
+$ni.add_MouseDoubleClick({ Open-Panel })
+
+$menu.add_Opening({
+  if (Test-Port $PORT) {
+    $miStat.Text = '状态：网关运行中 · 端口 15722'
+    $miRestart.Enabled = $true
+    $miMagpie.Enabled = $true
+    $miRestore.Enabled = $true
+    $miClaude.Enabled = $true
+    $miCfg.Enabled = $true
+  } else {
+    $miStat.Text = '状态：网关已停止（点「重启网关」）'
+    $miRestart.Enabled = $true
+    $miMagpie.Enabled = $false
+    $miRestore.Enabled = $false
+    $miClaude.Enabled = $true
+    $miCfg.Enabled = $true
+  }
+})
+
+$miOpen.add_Click({ Open-Panel })
+
+$miRestart.add_Click({
+  Log-Tray '菜单：重启网关'
+  Stop-Gateway
+  if (Start-Gateway) {
+    Log-Tray '菜单：重启网关成功'
+    Tip 'Claude 网关' '网关已重启。'
+  } else {
+    Log-Tray '菜单：重启网关失败'
+    Tip 'Claude 网关' '网关没能起来，请打开日志查看原因。'
+  }
+})
+
+$miMagpie.add_Click({
+  Log-Tray '菜单：重启/打开 Magpie'
+  $err = Invoke-Act 'restart-magpie'
+  if ($err -ne '') { Tip 'Magpie' $err; Log-Tray ('重启/打开 Magpie ' + $err) } else { Tip 'Magpie' '已发送重启/打开指令，约 2 秒后可用。' }
+})
+
+$miRestore.add_Click({
+  Log-Tray '菜单：恢复原装 Claude 设置'
+  $err = Invoke-Act 'restore-original'
+  if ($err -ne '') { Tip '配置' $err; Log-Tray ('恢复原装配置 ' + $err) } else { Tip '配置' '已恢复原装 Claude 设置，重启 Claude 后生效。' }
+})
+
+$miClaude.add_Click({
+  Log-Tray '菜单：重启/打开 Claude'
+  $err = Invoke-Act 'restart-claude' 45
+  if ($err -ne '') { Tip 'Claude' $err; Log-Tray ('重启/打开 Claude ' + $err) } else { Tip 'Claude' 'Claude 已重新打开。' }
+})
+
+$miLog.add_Click({
+  $f = Join-Path $ROOT 'gateway.log'
+  if (Test-Path -LiteralPath $f) { Start-Process notepad.exe $f } else { Tip '日志' '还没有日志文件。' }
+})
+
+$miCfg.add_Click({
+  $err = Invoke-Act 'open-config'
+  if ($err -ne '') { Start-Process explorer.exe $ROOT }
+})
+
+function Invoke-Quit {
+  Log-Tray '执行退出：关闭网关并结束托盘'
+  $script:Timer.Stop()
+  New-Item -ItemType File -Path $FLAG -Force | Out-Null
+  Stop-Gateway
+  # 兜底：反复确认端口已释放，确保不留下任何 node 进程
+  for ($i = 0; $i -lt 10; $i++) {
+    if (-not (Test-Port $PORT)) { break }
+    $p = Get-GwPid
+    if ($p -gt 0) { Stop-Process -Id $p -Force -Confirm:$false -ErrorAction SilentlyContinue }
+    Start-Sleep -Milliseconds 250
+  }
+  $ni.Visible = $false
+  $ni.Dispose()
+  Log-Tray ('已退出，网关端口仍在运行=' + (Test-Port $PORT))
+  [System.Windows.Forms.Application]::Exit()
+}
+
+$miQuit.add_Click({ Invoke-Quit })
+
+# ---------- 看护 ----------
+
+$script:TickCount = 0
+$script:ModelCount = 0
+
+function Refresh-Tip([bool]$ok) {
+  if ($ok) {
+    $ni.Icon = $icoOk
+    $t = 'Claude 网关 · 运行中'
+    if ($script:ModelCount -gt 0) { $t = $t + ' · ' + $script:ModelCount + ' 个模型' }
+    if ($t.Length -le 63) { $ni.Text = $t }
+  } else {
+    $ni.Icon = $icoOff
+    $ni.Text = 'Claude 网关 · 已停止'
+  }
+}
+
+function Update-Models {
+  try {
+    $r = Invoke-RestMethod -Uri ('http://127.0.0.1:' + $PORT + '/admin/api/models') -TimeoutSec 4
+    if ($r -ne $null -and $r.models -ne $null) { $script:ModelCount = $r.models.Count }
+  } catch { }
+}
+
+Start-Gateway
+Update-Models
+Refresh-Tip (Test-Port $PORT)
+Log-Tray ('托盘已启动，网关端口 ' + $PORT + ' ' + (Test-Port $PORT))
+
+$script:Timer = New-Object System.Windows.Forms.Timer
+$script:Timer.Interval = 5000
+$script:Timer.add_Tick({
+  $script:TickCount = $script:TickCount + 1
+  $ok = Test-Port $PORT
+  if (-not $ok) {
+    Log-Tray '发现网关掉线，自动拉起'
+    $ok = Start-Gateway
+    if ($ok) { Update-Models }
+  } elseif (($script:TickCount % 6) -eq 0) {
+    Update-Models
+  }
+  Refresh-Tip $ok
+})
+$script:Timer.Start()
+
+# 自测开关：启动时带 --quit-test，3 秒后自动走一遍和菜单「退出」完全相同的流程
+if ($args -contains '--quit-test') {
+  Log-Tray '自测：3 秒后自动执行退出'
+  $script:QTimer = New-Object System.Windows.Forms.Timer
+  $script:QTimer.Interval = 3000
+  $script:QTimer.add_Tick({ $script:QTimer.Stop(); Invoke-Quit })
+  $script:QTimer.Start()
+}
+
+[System.Windows.Forms.Application]::Run()
+
+$script:Timer.Stop()
+try { $ni.Visible = $false; $ni.Dispose() } catch { }
+Log-Tray '消息循环结束'
