@@ -66,7 +66,7 @@ claude-gateway/
 | 场景 | 用什么 | 桌面上会出现 |
 |---|---|---|
 | 只想用网关卡（自己接上游） | 源码仓库 + `install.ps1` | `Claude 网关` |
-| 要 Magpie 的 WorkBuddy 额度 | **完整部署包**（Release 里的 ZIP） | `Claude 网关` + `Magpie` |
+| 要 Magpie 的 WorkBuddy 额度 | [**完整部署包**](https://github.com/linus441/claude-gateway/releases/download/v0.3.6/ClaudeGateway-v0.3.6.zip)（359 MB，含全部二进制） | `Claude 网关` + `Magpie` |
 | 还要装 Claude Desktop | 再加 `install-claude.ps1` | 再加 `Claude` |
 
 **桌面图标一共三个：**
