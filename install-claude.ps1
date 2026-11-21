@@ -22,19 +22,31 @@ $Root = $PSScriptRoot
 $Payload = Join-Path $Root 'payload'
 $ClaudePayload = Join-Path $Payload 'claude'
 $Msix = Join-Path $ClaudePayload 'Claude-win-x64.msix'
-$MsixDownloadUrl = 'https://claude.ai/api/desktop/win32/x64/msix/latest/redirect'
+$MsixDownloadUrls = @(
+    'https://github.com/linus441/claude-gateway/releases/download/v0.3.1/Claude-win-x64.msix',
+    'https://claude.ai/api/desktop/win32/x64/msix/latest/redirect'
+)
+$MsixSha256 = '4625EAA902E05C81D35D247423AE24A2A1C30E60CAE9B355C07264998A89E453'
 
 function Ensure-ClaudeMsix {
     if (Test-Path -LiteralPath $Msix -PathType Leaf) { return $true }
     try {
         New-Item -ItemType Directory -Force -Path $ClaudePayload | Out-Null
         [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
-        Write-Host '     正在从 Anthropic 官方地址下载 Claude MSIX…' -ForegroundColor DarkGray
-        Invoke-WebRequest -Uri $MsixDownloadUrl -OutFile $Msix -UseBasicParsing -ErrorAction Stop
-        if (-not (Test-Path -LiteralPath $Msix -PathType Leaf) -or (Get-Item -LiteralPath $Msix).Length -lt 1MB) {
-            throw '下载文件为空或不完整'
+        foreach ($url in $MsixDownloadUrls) {
+            try {
+                Write-Host ('     正在下载 Claude MSIX：' + $url) -ForegroundColor DarkGray
+                Invoke-WebRequest -Uri $url -OutFile $Msix -UseBasicParsing -ErrorAction Stop
+                if ((Test-Path -LiteralPath $Msix -PathType Leaf) -and (Get-Item -LiteralPath $Msix).Length -ge 1MB) {
+                    $hash = (Get-FileHash -LiteralPath $Msix -Algorithm SHA256).Hash
+                    if ($hash -eq $MsixSha256) { return $true }
+                    Remove-Item -LiteralPath $Msix -Force -ErrorAction SilentlyContinue
+                }
+            } catch {
+                Remove-Item -LiteralPath $Msix -Force -ErrorAction SilentlyContinue
+            }
         }
-        return $true
+        throw '所有官方下载地址均不可用'
     } catch {
         Remove-Item -LiteralPath $Msix -Force -ErrorAction SilentlyContinue
         Warn ('下载 Claude MSIX 失败：' + $_.Exception.Message)
