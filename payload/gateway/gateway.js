@@ -7,6 +7,7 @@
 
 const http = require('http');
 const https = require('https');
+const crypto = require('crypto');
 const fs = require('fs');
 const path = require('path');
 const net = require('net');
@@ -29,6 +30,28 @@ if (process.env.GATEWAY_QUIET === '1' || process.argv.indexOf('--quiet') > 0) {
 }
 
 const PORT = 15722;
+const MAX_BODY_BYTES = 32 * 1024 * 1024;
+const KEY_FILE = path.join(__dirname, 'gw-key.txt');
+
+function loadGatewayKey() {
+  try {
+    const key = fs.readFileSync(KEY_FILE, 'utf8').trim();
+    if (key) return key;
+  } catch (e) {}
+  const key = 'sk-gw-' + crypto.randomBytes(24).toString('hex');
+  try { fs.writeFileSync(KEY_FILE, key, { encoding: 'ascii', flag: 'wx' }); } catch (e) {}
+  try { return fs.readFileSync(KEY_FILE, 'utf8').trim() || key; } catch (e) { return key; }
+}
+
+const GATEWAY_KEY = loadGatewayKey();
+
+function hasGatewayAuth(req) {
+  const bearer = String(req.headers.authorization || '').replace(/^Bearer\s+/i, '').trim();
+  const presented = bearer || String(req.headers['x-api-key'] || '').trim();
+  if (!presented || presented.length !== GATEWAY_KEY.length) return false;
+  return crypto.timingSafeEqual(Buffer.from(presented), Buffer.from(GATEWAY_KEY));
+}
+
 // 上游（地址 / key / 模型列表路径）全部集中在 upstreams.json
 // 在控制面板里改完保存即热生效，不用改代码、不用重启网关
 const UP_FILE = path.join(__dirname, 'upstreams.json');
@@ -51,8 +74,16 @@ const DEFAULT_UPSTREAMS = [
 //   https://api.x.com/v1        -> prefix ''        目标 /v1/messages
 //   https://api.x.com/openai/v1 -> prefix '/openai' 目标 /openai/v1/messages
 //   https://api.deepseek.com/anthropic -> prefix '/anthropic'
+function isLoopbackHost(host) {
+  const h = String(host || '').toLowerCase().replace(/^\[|\]$/g, '');
+  return h === 'localhost' || h === '::1' || h === '127.0.0.1';
+}
+
 function parseBaseUrl(baseUrl) {
   const u = new URL(String(baseUrl || '').trim());
+  if (u.protocol === 'http:' && !isLoopbackHost(u.hostname)) {
+    throw new Error('远程上游必须使用 HTTPS；HTTP 只允许本机回环地址');
+  }
   let p = u.pathname.replace(/\/+$/, '');
   if (p.endsWith('/v1')) p = p.slice(0, -3);
   return {
@@ -309,6 +340,19 @@ function snapReadJson(file) {
   try { return JSON.parse(fs.readFileSync(file, 'utf8')); } catch (e) { return null; }
 }
 
+function redactUpstreams(value) {
+  if (!value || typeof value !== 'object') return value;
+  const copy = JSON.parse(JSON.stringify(value));
+  if (copy && Array.isArray(copy.upstreams)) {
+    copy.upstreams = copy.upstreams.map(u => {
+      const out = Object.assign({}, u);
+      delete out.apiKey;
+      return out;
+    });
+  }
+  return copy;
+}
+
 function snapTime(ts) {
   const d = new Date(ts);
   const p = n => String(n).padStart(2, '0');
@@ -343,6 +387,7 @@ function snapTake(reason) {
   snapDirReady();
   const models = snapReadJson(MODELS_FILE);
   const upstreams = snapReadJson(UP_FILE);
+  const safeUpstreams = redactUpstreams(upstreams);
   if (!Array.isArray(models) || !models.length) {
     log('[snap] 跳过：models.json 读不出来或为空');
     return null;
@@ -356,7 +401,7 @@ function snapTake(reason) {
   if (newest) {
     const prev = snapReadJson(path.join(SNAP_DIR, newest.id + '.json'));
     if (prev && JSON.stringify(prev.models) === JSON.stringify(models) &&
-        JSON.stringify(prev.upstreams) === JSON.stringify(upstreams)) {
+        JSON.stringify(prev.upstreams) === JSON.stringify(safeUpstreams)) {
       log('[snap] 内容和上一份一样（' + newest.time + '），不重复存');
       return { id: newest.id, ts: newest.ts, reason: newest.reason, skipped: true };
     }
@@ -370,7 +415,7 @@ function snapTake(reason) {
     app: 'claude-gateway',
     version: 1,
     models,
-    upstreams
+    upstreams: safeUpstreams
   };
   try {
     fs.writeFileSync(path.join(SNAP_DIR, id + '.json'), JSON.stringify(payload, null, 2), 'utf8');
@@ -403,8 +448,16 @@ function snapRestore(id) {
   snapTake('复原到 ' + snapTime(j.ts) + ' 之前');
 
   try {
+    const current = snapReadJson(UP_FILE) || {};
+    const currentKeys = {};
+    if (Array.isArray(current.upstreams)) current.upstreams.forEach(u => { currentKeys[u.id] = u.apiKey; });
+    const restoredUpstreams = Object.assign({}, j.upstreams, {
+      upstreams: j.upstreams.upstreams.map(u => Object.assign({}, u, {
+        apiKey: Object.prototype.hasOwnProperty.call(currentKeys, u.id) ? currentKeys[u.id] : ''
+      }))
+    });
     fs.writeFileSync(MODELS_FILE, JSON.stringify(j.models, null, 2), 'utf8');
-    fs.writeFileSync(UP_FILE, JSON.stringify(j.upstreams, null, 2), 'utf8');
+    fs.writeFileSync(UP_FILE, JSON.stringify(restoredUpstreams, null, 2), 'utf8');
   } catch (e) {
     return { ok: false, errors: ['写入失败：' + e.message] };
   }
@@ -806,6 +859,7 @@ function checkBaseUrl(baseUrl) {
     const u = new URL(s);
     if (u.protocol !== 'http:' && u.protocol !== 'https:') return 'Base URL 必须以 http:// 或 https:// 开头';
     if (!u.hostname) return 'Base URL 里缺少主机名';
+    if (u.protocol === 'http:' && !isLoopbackHost(u.hostname)) return '远程上游必须使用 HTTPS；HTTP 只允许本机回环地址';
     return '';
   } catch (e) {
     return 'Base URL 格式不对：' + s.slice(0, 60);
@@ -815,7 +869,12 @@ function checkBaseUrl(baseUrl) {
 function saveUpstreams() {
   snapTake('修改上游');
   const bak = UP_FILE + '.bak-' + stampNow();
-  try { if (fs.existsSync(UP_FILE)) fs.copyFileSync(UP_FILE, bak); } catch (e) {}
+  try {
+    if (fs.existsSync(UP_FILE)) {
+      const current = snapReadJson(UP_FILE);
+      fs.writeFileSync(bak, JSON.stringify(redactUpstreams(current), null, 2), 'utf8');
+    }
+  } catch (e) {}
   fs.writeFileSync(UP_FILE, JSON.stringify({ version: 2, upstreams: UP_LIST }, null, 2), 'utf8');
   UPSTREAMS = buildUpstreams(UP_LIST);
   log('[admin] upstreams.json 已更新（' + UP_LIST.length + ' 个上游）');
@@ -1329,6 +1388,11 @@ const server = http.createServer((req, res) => {
   if (srcIp !== '127.0.0.1' && url !== '/health') log('[req] from ' + srcIp + ' ' + req.method + ' ' + url);
 
   const pathOnly = url.split('?')[0];
+  const isLocal = srcIp === '127.0.0.1' || srcIp === '::1';
+  if (!isLocal && !hasGatewayAuth(req)) {
+    res.writeHead(401, { 'content-type': 'application/json', 'www-authenticate': 'Bearer' });
+    return res.end(JSON.stringify({ error: { type: 'authentication_error', message: 'gateway authentication required' } }));
+  }
   if (pathOnly === '/favicon.ico') {
     fs.readFile(ICON_FILE, (err, buf) => {
       if (err) { res.writeHead(204); return res.end(); }
@@ -1365,8 +1429,15 @@ const server = http.createServer((req, res) => {
   }
 
   const chunks = [];
-  req.on('data', c => chunks.push(c));
+  let bodySize = 0;
+  let tooLarge = false;
+  req.on('data', c => {
+    bodySize += c.length;
+    if (bodySize > MAX_BODY_BYTES) { tooLarge = true; return; }
+    chunks.push(c);
+  });
   req.on('end', () => {
+    if (tooLarge) return sendJson(res, 413, { type: 'error', error: { type: 'invalid_request_error', message: '请求体不能超过 32 MB' } });
     let body = Buffer.concat(chunks);
     let entry = byTier('sonnet') || MODELS[0];
     let route = null;

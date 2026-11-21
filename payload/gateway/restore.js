@@ -37,8 +37,9 @@ const API_KEY = (() => {
     const k = fs.readFileSync(path.join(GW_DIR, 'gw-key.txt'), 'utf8').trim();
     if (k) return k;
   } catch (e) {}
-  // 占位符：网关不校验这个值，安装器会生成真正的随机值写进 gw-key.txt
-  return 'sk-gw-local-placeholder';
+  const key = 'sk-gw-' + require('crypto').randomBytes(24).toString('hex');
+  try { fs.writeFileSync(path.join(GW_DIR, 'gw-key.txt'), key, { encoding: 'ascii', flag: 'wx' }); } catch (e) {}
+  try { return fs.readFileSync(path.join(GW_DIR, 'gw-key.txt'), 'utf8').trim() || key; } catch (e) { return key; }
 })();
 const PORT_GW = 15722;
 const PORT_MAGPIE = 3425;

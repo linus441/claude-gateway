@@ -5,42 +5,72 @@ on:
     branches: [main]
   pull_request:
 
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
 jobs:
   check:
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
           node-version: '22'
 
       - name: JavaScript 语法检查
         shell: pwsh
         run: |
-          $files = Get-ChildItem payload/gateway -Filter *.js
+          $files = Get-ChildItem . -Filter *.js -Recurse -File
           foreach ($f in $files) {
             node --check $f.FullName
-            if ($LASTEXITCODE -ne 0) { throw "语法错误: $($f.Name)" }
-            Write-Host "OK  $($f.Name)"
+            if ($LASTEXITCODE -ne 0) { throw "语法错误: $($f.FullName)" }
+            Write-Host "OK  $($f.FullName)"
           }
 
       - name: JSON 校验
         shell: pwsh
         run: |
-          $files = Get-ChildItem payload/gateway -Filter *.json
+          $files = Get-ChildItem . -Filter *.json -Recurse -File
           foreach ($f in $files) {
             $null = Get-Content $f.FullName -Raw -Encoding UTF8 | ConvertFrom-Json
-            Write-Host "OK  $($f.Name)"
+            Write-Host "OK  $($f.FullName)"
           }
 
       - name: PowerShell 语法检查
         shell: pwsh
         run: |
-          $files = Get-ChildItem . -Filter *.ps1
+          $files = Get-ChildItem . -Filter *.ps1 -Recurse -File
           foreach ($f in $files) {
             $errs = $null
             [void][System.Management.Automation.Language.Parser]::ParseFile($f.FullName, [ref]$null, [ref]$errs)
-            if ($errs) { throw "语法错误: $($f.Name) - $($errs[0].Message)" }
-            Write-Host "OK  $($f.Name)"
+            if ($errs) { throw "语法错误: $($f.FullName) - $($errs[0].Message)" }
+            Write-Host "OK  $($f.FullName)"
+          }
+
+      - name: CMD/VBS 入口检查
+        shell: pwsh
+        run: |
+          $files = @(
+            '一键安装.cmd',
+            '一键卸载.cmd',
+            '安装Claude桌面版-右键以管理员运行.cmd',
+            'payload/gateway/tray-launch.vbs'
+          )
+          foreach ($file in $files) {
+            if (-not (Test-Path -LiteralPath $file -PathType Leaf)) { throw "缺少入口文件: $file" }
+            $content = Get-Content -LiteralPath $file -Raw -Encoding UTF8
+            switch -Wildcard ($file) {
+              '*.cmd' {
+                if ($content -notmatch '(?im)powershell(?:\.exe)?[^\r\n]*-File[^\r\n]*%~dp0') { throw "入口未调用 PowerShell 脚本: $file" }
+              }
+              '*.vbs' {
+                if ($content -notmatch '(?im)CreateObject\(\"WScript\.Shell\"\)' -or $content -notmatch '(?im)tray\.ps1') { throw "托盘启动入口内容异常: $file" }
+              }
+            }
+            Write-Host "OK  $file"
           }

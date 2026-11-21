@@ -41,14 +41,14 @@ function uuid4() {
 }
 
 function readKey() {
-  const cands = [path.join(GW, 'gw-key.txt')];
-  for (const c of cands) {
-    try {
-      const t = fs.readFileSync(c, 'utf8').trim();
-      if (t) return t;
-    } catch (e) {}
-  }
-  return 'sk-gateway-local';
+  const file = path.join(GW, 'gw-key.txt');
+  try {
+    const t = fs.readFileSync(file, 'utf8').trim();
+    if (t) return t;
+  } catch (e) {}
+  const key = 'sk-gw-' + crypto.randomBytes(24).toString('hex');
+  try { fs.writeFileSync(file, key, { encoding: 'ascii', flag: 'wx' }); } catch (e) {}
+  try { return fs.readFileSync(file, 'utf8').trim() || key; } catch (e) { return key; }
 }
 
 function buildModels() {

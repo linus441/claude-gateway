@@ -20,7 +20,27 @@ if (-not $isAdmin) {
 
 $Root = $PSScriptRoot
 $Payload = Join-Path $Root 'payload'
-$Msix = Join-Path $Payload 'claude\Claude-win-x64.msix'
+$ClaudePayload = Join-Path $Payload 'claude'
+$Msix = Join-Path $ClaudePayload 'Claude-win-x64.msix'
+$MsixDownloadUrl = 'https://claude.ai/api/desktop/win32/x64/msix/latest/redirect'
+
+function Ensure-ClaudeMsix {
+    if (Test-Path -LiteralPath $Msix -PathType Leaf) { return $true }
+    try {
+        New-Item -ItemType Directory -Force -Path $ClaudePayload | Out-Null
+        [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+        Write-Host '     正在从 Anthropic 官方地址下载 Claude MSIX…' -ForegroundColor DarkGray
+        Invoke-WebRequest -Uri $MsixDownloadUrl -OutFile $Msix -UseBasicParsing -ErrorAction Stop
+        if (-not (Test-Path -LiteralPath $Msix -PathType Leaf) -or (Get-Item -LiteralPath $Msix).Length -lt 1MB) {
+            throw '下载文件为空或不完整'
+        }
+        return $true
+    } catch {
+        Remove-Item -LiteralPath $Msix -Force -ErrorAction SilentlyContinue
+        Warn ('下载 Claude MSIX 失败：' + $_.Exception.Message)
+        return $false
+    }
+}
 
 function Step($n, $t) { Write-Host "`n[$n] $t" -ForegroundColor Cyan }
 function Ok($m)   { Write-Host "     OK   $m" -ForegroundColor Green }
@@ -38,7 +58,7 @@ $pkg = Get-AppxPackage -Name '*Claude*' -ErrorAction SilentlyContinue |
        Select-Object -First 1
 if ($pkg) {
     Ok ("已安装 " + $pkg.Name + " " + $pkg.Version)
-} elseif (Test-Path $Msix) {
+} elseif (Ensure-ClaudeMsix) {
     try {
         Add-AppxPackage -Path $Msix -ErrorAction Stop
         $pkg = Get-AppxPackage -Name '*Claude*' |
