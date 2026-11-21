@@ -1,7 +1,7 @@
 # Claude Gateway
 
 一个跑在 Windows 本机的 Claude Desktop 多上游网关：把 Claude Desktop 的请求转发到你自己的模型服务，
-同时支持 **Anthropic 协议** 和 **OpenAI 协议** 的上游。
+同时支持 **Anthropic 协议** 和 **OpenAI 协议** 的上游，简单的说可以同时有好几个供应商，比如workbuddy账号模型，某个中转站，deepseek等同时在claude上，值得一提的是claudedesktop只支持10个模型接入。
 
 > 个人项目，非官方。Claude Desktop 是 Anthropic 的商标，本项目与 Anthropic 无关。
 
