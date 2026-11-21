@@ -2,6 +2,11 @@
 
 版本号的唯一来源是 `payload/gateway/version.json`，安装脚本、控制面板和 `/health` 都读它。
 
+## 0.3.4 — 2026-11-21
+
+- `install-claude.ps1` 优先使用本地/共享目录里的 MSIX，避免从 GitHub 下载 285 MB
+- 新增 `vm-install-offline`：完全离线安装脚本，不发任何网络请求
+
 ## 0.3.3 — 2026-11-21
 
 - 安装脚本支持把 `magpie.exe` 直接放在 `install.ps1` 同目录

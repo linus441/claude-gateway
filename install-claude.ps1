@@ -27,9 +27,26 @@ $MsixDownloadUrls = @(
     'https://claude.ai/api/desktop/win32/x64/msix/latest/redirect'
 )
 $MsixSha256 = '4625EAA902E05C81D35D247423AE24A2A1C30E60CAE9B355C07264998A89E453'
+# 本机/共享目录里已经有完整包时直接拿来用，不走网络
+$MsixLocalSources = @(
+    (Join-Path $Root 'Claude网关部署包\payload\claude\Claude-win-x64.msix'),
+    (Join-Path (Split-Path $Root -Parent) 'Claude网关部署包\payload\claude\Claude-win-x64.msix'),
+    'Z:\Claude网关部署包\payload\claude\Claude-win-x64.msix'
+)
 
 function Ensure-ClaudeMsix {
     if (Test-Path -LiteralPath $Msix -PathType Leaf) { return $true }
+    foreach ($src in $MsixLocalSources) {
+        if (Test-Path -LiteralPath $src -PathType Leaf) {
+            try {
+                New-Item -ItemType Directory -Force -Path $ClaudePayload | Out-Null
+                Write-Host ('     使用本地 MSIX：' + $src) -ForegroundColor DarkGray
+                Copy-Item $src $Msix -Force
+                if ((Get-FileHash -LiteralPath $Msix -Algorithm SHA256).Hash -eq $MsixSha256) { return $true }
+                Remove-Item $Msix -Force -ErrorAction SilentlyContinue
+            } catch {}
+        }
+    }
     try {
         New-Item -ItemType Directory -Force -Path $ClaudePayload | Out-Null
         [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
